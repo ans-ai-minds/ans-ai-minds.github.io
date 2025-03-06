@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Us - Get in touch for inquiries, collaborations, or support.">
+    <title>Contact Us | ANS AI MINDS</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR-REAL-KIT-ID.js" crossorigin="anonymous"></script>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li {
+            color: gold !important;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            background: url('assets/images/Background.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .sidebar .logo img {
+            width: 130px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navbar ul li {
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            font-size: 14px;
+            color: rgb(191, 175, 87);
+        }
+
+        .navbar ul li a:hover {
+            background: black;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: 230px;
+            min-height: 100vh;
+            align-items: center;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        /* Contact Section */
+        .contact {
+            width: 100%;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+        .contact h1, .contact p, .contact h3 {
+            color: rgb(191, 175, 87);
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .contact-info, .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1 1 45%;
+            min-width: 300px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .contact-form button {
+            background: rgb(191, 175, 87);
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background: #ffd700;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 5px;
+            background: black;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+            }
+            .container {
+                margin-left: 0;
+            }
+            footer {
+                width: 100%;
+                left: 0;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Your Logo" />
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="skills.html">Our Expertise and Skills</a></li>
+                <li><a href="process.html">How We Work</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content">
+            <section class="contact">
+                <h1>Contact Us</h1>
+                <p>Get in touch with us for inquiries, collaborations, or support.</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Details</h3>
+                        <br><p><i class="fas fa-map-marker-alt"></i> Kolkata, West Bengal, India</p><br>
+                        <p><i class="fas fa-envelope"></i> ans@ans-ai-minds.com</p>
+                        <p><i class="fas fa-envelope"></i> aritric@ans-ai-minds.com</p>
+                        <p><i class="fas fa-envelope"></i> sayan@ans-ai-minds.com</p>
+                        <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        <p><i class="fas fa-question-circle"></i> Have an inquiry? <a href="https://forms.gle/tBfpHQTvzA4NQW498" target="_blank" style="color: rgb(191, 175, 87); text-decoration: underline;">Fill out our Inquiry Form</a></p>
+                    </div>
+
+                    <!--<div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <form id="contact-form">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>-->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        var formData = new FormData(this);
+        var url = "https://script.google.com/macros/s/AKfycbx5LRgtTAfM5ucYMz0bBI3wWKCbK2bKLrZ7soyyQJGM_THfzLVy5q4rAwCiMc0zLM2dnA/exec"; 
+
+        fetch(url, {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert("Message sent successfully!");
+            document.getElementById("contact-form").reset();
+        })
+        .catch(error => {
+            alert("Error sending message. Try again later.");
+        });
+    });
+    </script>
+</body>
+</html>

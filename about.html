@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ANS AI MINDS</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR-REAL-KIT-ID.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li {
+            color: gold !important;
+
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('assets/images/Background.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .sidebar .logo img {
+            width: 130px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navbar ul li {
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            font-size: 14px;
+        }
+
+        .navbar ul li a:hover {
+            background: black;
+        }
+
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: 230px;
+            min-height: 100vh;
+        }
+
+        .content {
+            padding: 20px;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        /* About Section - Centered */
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin-left: 10%;
+        }
+
+        /* Transparent Box for Sections */
+        .section-box {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        
+        }
+
+        /* Vision & Mission - Side by Side */
+        .mission-vision {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 80%;
+            max-width: 10000px;
+            margin-left: -5%;
+        }
+
+       /* Make each vision and mission box equal */
+        .mission-vision .section-box {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .client-box {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        /* Stats Section Container */
+        .stats-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual Stat Box */
+        .stat-box {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            padding: 20px;
+            border-radius: 10px;
+            width: 23%; /* Four per row */
+            min-width: 220px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Stat Numbers */
+        .stat-box h3 {
+            color: gold;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* Stat Description */
+        .stat-box p {
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Feedback Section Container */
+        .feedback {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            width: 60%; /* Reduce the width */
+            margin: 0 auto 10px auto; /* Reduce bottom margin */
+            border-radius: 10px; /* Add rounded corners */
+            text-align: center;
+            padding-bottom: 10px; /* Reduce bottom padding */
+            height: auto; /* Ensures no unnecessary extra space */
+            max-height: 600px; /* Adjust based on content */
+            overflow: hidden; /* Prevents extra spacing */
+        }
+
+
+        /* Feedback Header */
+        .feedback h2 {
+            color: gold;
+            font-size: 32px;
+            margin-bottom: 10px;
+            margin-left: -70%;
+        }
+
+        /* Center the feedback slider */
+        .feedback-slider {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            max-width: 600px; /* Reduce max-width */
+            margin: 0 auto; /* Center horizontally */
+            height: 350px; /* Adjust height as needed */
+            margin-left: -50%;
+        }
+
+        /* Feedback Box */
+        .feedback-box {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 80%;
+            box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%); /* Center the box */
+            text-align: center;
+        }
+
+        .feedback-box.active {
+            opacity: 1;
+            position: relative;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .feedback-box {
+                max-width: 95%;
+            }
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .stat-box {
+                width: 45%; /* Two per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stat-box {
+                width: 100%; /* Full width on very small screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mission-vision {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Centering Text */
+        .section-box h1, 
+        .section-box h2, 
+        .section-box p {
+             color: rgb(191, 175, 87) !important;
+        }
+        
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 5px;
+            background: black;
+            color:gold;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+            }
+            .container {
+                margin-left: 0;
+            }
+            footer {
+                width: 100%;
+                left: 0;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Your Logo" />
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="skills.html">Expertise and Skills</a></li>
+                <!--<li><a href="clients.html">Clients</a></li>-->
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+            <section class="about">
+                <div class="section-box">
+                    <h1>About Us</h1>
+                    <p>At ANS AI MINDS, we are at the forefront of innovation, specializing in cutting-edge technologies such as Generative AI, Machine Learning, Deep Learning, and Natural Language Processing.</p>
+                </div>
+                <div class="mission-vision">
+                    <div class="section-box">
+                        <h2>Our Vision</h2>
+                        <p>Our vision is to lead the charge in advancing AI technologies, fostering innovation, and driving sustainable growth for businesses globally.</p>
+                    </div>
+                    <div class="section-box">
+                        <h2>Our Mission</h2>
+                        <p>Our mission is to harness the power of AI to provide transformative solutions that propel businesses into the future.</p>
+                    </div>
+                </div>
+                <div class="section-box">
+                    <h2>Our Team</h2>
+                    <p>Our team consists of AI experts, entrepreneurs, and consultants specializing in Generative AI, Machine Learning, Deep Learning, and NLP.</p>
+                </div>
+                <div class="section-box">
+                    <h2>🚀 Our Achievements</h2>
+                    <div class="stats-section">
+                        <div class="stat-box">
+                            <h3>70+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h3>10+</h3>
+                            <p>Industries Served</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h3>30+</h3>
+                            <p>AI Models Deployed</p>
+                        </div>
+                
+                        <div class="stat-box">
+                            <h3>100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="section-box">
+                    <h2>Clients We’ve Worked</h2>
+                
+                    <div class="client-box">
+                        <h3>🔹 Global Financial Institution (Revenue Impact: 18% growth in customer satisfaction)</h3>
+                        <ul>
+                            <li>Developed AI-powered chatbots using NLP and LLMs for real-time customer support.</li>
+                            <li>Integrated financial forecasting tools with Deep Learning models for risk analysis.</li>
+                            <li>Deployed Generative AI for personalized financial reports, automating advisory services.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Leading E-Commerce Platform (Revenue Impact: 40% increase in sales)</h3>
+                        <ul>
+                            <li>Designed a recommendation engine using Deep Learning-based collaborative filtering.</li>
+                            <li>Enhanced inventory management through Generative AI-powered demand forecasting.</li>
+                            <li>Implemented Conversational AI with NLP for AI-assisted product discovery.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Online Payment Solutions (Revenue Impact: 50% reduction in fraud cases)</h3>
+                        <ul>
+                            <li>Developed AI fraud detection system using Deep Learning anomaly detection models.</li>
+                            <li>Automated transaction verification with blockchain integration and Generative AI.</li>
+                            <li>Integrated NLP-based AI to analyze financial documents for fraud detection.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Healthcare Provider (Revenue Impact: 30% improvement in patient care coordination)</h3>
+                        <ul>
+                            <li>Developed AI-powered diagnostic tools using Deep Learning for medical imaging.</li>
+                            <li>Automated patient scheduling with NLP-based AI assistants.</li>
+                            <li>Leveraged Generative AI to summarize complex medical records for doctors.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Tech Manufacturing Leader (Revenue Impact: 25% increase in production efficiency)</h3>
+                        <ul>
+                            <li>Implemented AI-driven supply chain models with Deep Learning predictive analytics.</li>
+                            <li>Integrated IoT sensors & AI for predictive maintenance with Neural Networks.</li>
+                            <li>Deployed Generative AI-powered anomaly detection to improve product quality.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Retail Chain (Revenue Impact: 28% increase in foot traffic)</h3>
+                        <ul>
+                            <li>Built AI-powered recommendation engines leveraging Deep Learning NLP models.</li>
+                            <li>Developed an automated inventory system using Generative AI-powered forecasting.</li>
+                            <li>Implemented AI-based virtual assistants using NLP for voice & chat shopping.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <div class="section-box">
+                    <h2>Key Achievements</h2>
+                    <ul>
+                        <li> Developed AI-powered automation tools that increased operational efficiency by 40%.</li>
+                        <li> Implemented predictive maintenance systems, reducing downtime by 30%.</li>
+                        <li> Created personalized AI-based marketing systems, boosting customer engagement by 35%.</li>
+                        <li> Optimized financial forecasting, increasing revenue by 25% for clients across various industries.</li>
+                    </ul>
+                </div>
+
+                <section class="feedback">
+                    <div class="container">
+                        <h2>🌟 Client Feedback 🌟</h2>
+                
+                        <!-- Feedback Slider -->
+                        <div class="feedback-slider">
+                            <div class="feedback-box active">
+                                <h3>🔹 Global Consulting Firm</h3>
+                                <p>⭐⭐⭐⭐⭐ <strong>"AI-Powered Efficiency Boost!"</strong></p>
+                                <p>"Working with ANS AI MINDS was a game-changer for our operations. Their AI-based data analytics tools automated our client reporting, improving process efficiency by 20%! The machine learning algorithms they implemented optimized our cost structure, making decision-making faster and more effective. A truly invaluable partnership!"</p>
+                                <p><strong>— Michael Carter, Chief Strategy Officer</strong></p>
+                            </div>
+                
+                            <div class="feedback-box">
+                                <h3>🔹 International Audit Firm</h3>
+                                <p>⭐⭐⭐⭐⭐ <strong>"Accuracy and Compliance Like Never Before!"</strong></p>
+                                <p>"The cloud-based tax reporting system designed by ANS AI MINDS significantly enhanced the accuracy of our financial reporting. Their AI-powered auditing tools helped us reduce compliance errors by 15%, ensuring better risk assessment. Their professionalism and expertise are unmatched!"</p>
+                                <p><strong>— Sophia Patel, Head of Compliance</strong></p>
+                            </div>
+                
+                            <div class="feedback-box">
+                                <h3>🔹 Tech Manufacturing Leader</h3>
+                                <p>⭐⭐⭐⭐⭐ <strong>"Revolutionizing Production with AI!"</strong></p>
+                                <p>"Thanks to ANS AI MINDS, our production efficiency skyrocketed by 25%! Their AI-driven supply chain models optimized inventory levels, and predictive maintenance with IoT sensors drastically reduced downtime. We highly recommend them for any AI-driven transformation!"</p>
+                                <p><strong>— David Chang, Operations Director</strong></p>
+                            </div>
+                
+                            <div class="feedback-box">
+                                <h3>🔹 Global Financial Institution</h3>
+                                <p>⭐⭐⭐⭐⭐ <strong>"AI-Powered Customer Experience & Forecasting!"</strong></p>
+                                <p>"We needed an AI-powered solution for customer support, and ANS AI MINDS delivered beyond expectations! The chatbot they built drastically improved response times, leading to an 18% increase in customer satisfaction. Their financial forecasting tools also gave us deep insights for better decision-making. Exceptional work!"</p>
+                                <p><strong>— Emily Rodriguez, VP of Digital Banking</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+
+            </section>
+        </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
+    </footer>
+</body>
+</html>

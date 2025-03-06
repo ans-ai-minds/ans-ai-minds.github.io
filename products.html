@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | ANS AI MINDS</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR-REAL-KIT-ID.js" crossorigin="anonymous"></script>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li {
+            color: gold !important;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            background: url('assets/images/Background.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .sidebar .logo img {
+            width: 130px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navbar ul li {
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            font-size: 14px;
+            color: rgb(191, 175, 87);
+        }
+
+        .navbar ul li a:hover {
+            background: black;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: 230px;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 50px;
+            border-radius: 8px;
+            flex: 1 1 30%;
+            min-width: 250px;
+            text-align: center;
+            color: gold;
+        }
+
+        h1 {
+            
+            color: gold;
+            text-align: center; /* Centers the heading */
+            font-size: 2.5em;
+            margin-top: auto;
+            margin-left: -10%;
+            margin-bottom: 50px;
+        }
+
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 5px;
+            background: black;
+            color: gold;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+            }
+            .container {
+                margin-left: 0;
+            }
+            footer {
+                width: 100%;
+                left: 0;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Your Logo" />
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="skills.html">Our Expertise and Skills</a></li>
+                <li><a href="process.html">How We Work</a></li>
+                <!--<li><a href="clients.html">Clients</a></li>-->
+                <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content">
+        <section class="our-products">
+            <div class="container">
+                <h1>Our Products</h1>
+                <div class="products-grid">
+                    <div class="product">
+                        <h2>📌 AutoDocQuery (AI-Powered Document Processing)</h2>
+                        <ul>
+                            <li>Extracts key insights, automates compliance, and reduces manual review by 70%.</li>
+                            <li>Adopted by major financial firms, reducing audit costs significantly.</li>
+                        </ul>
+                    </div>
+                    <div class="product">
+                        <h2>📌 TextifyAI (AI-Powered Content Generation)</h2>
+                        <ul>
+                            <li>Enhances content creation productivity by 80%.</li>
+                            <li>Used in marketing automation & AI-driven SEO strategies.</li>
+                        </ul>
+                    </div>
+                    <div class="product">
+                        <h2>📌 SummarizerPro (AI Summarization Tool)</h2>
+                        <ul>
+                            <li>Cuts research time by 50%, used in corporate & academic sectors.</li>
+                            <li>Helps companies streamline knowledge management.</li>
+                        </ul>
+                    </div>
+                    <div class="product">
+                        <h2>📌 Text2Vision (Text-to-Image AI)</h2>
+                        <ul>
+                            <li>AI-powered text-to-image generation for marketing & creative industries.</li>
+                            <li>Enables faster branding, reducing design costs by 60%.</li>
+                        </ul>
+                    </div>
+                    <div class="product">
+                        <h2>📌 InstaCoder (AI-Powered Code Generation)</h2>
+                        <ul>
+                            <li>Automates code generation, reducing developer effort by 40%.</li>
+                            <li>Accelerates software delivery timelines for tech firms.</li>
+                        </ul>
+                    </div>
+                    <div class="product">
+                        <h2>📌 CodeSimplify (AI-Powered Code Documentation)</h2>
+                        <ul>
+                            <li>Auto-generates documentation, improving developer productivity.</li>
+                            <li>Adopted by software teams, cutting onboarding time by 30%.</li>
+                        </ul>
+                    </div>
+                    <div class="product">
+                        <h2>📌 AI-Powered Financial Forecasting System</h2>
+                        <ul>
+                            <li>Predicts stock market trends using LLM-based analytics.</li>
+                            <li>Financial firms report a 25% increase in profitability.</li>
+                        </ul>
+                    </div>
+                    <div class="product">
+                        <h2>📌 AI-Driven CRM Solution</h2>
+                        <ul>
+                            <li>AI-enhanced customer insights, lead scoring, and sentiment analysis.</li>
+                            <li>Boosts client retention & conversion rates by 35%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How We Work - Learn about our process and approach.">
+    <title>How We Work | ANS AI MINDS</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR-REAL-KIT-ID.js" crossorigin="anonymous"></script>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li {
+            color: gold !important;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            background: url('assets/images/Background.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .sidebar .logo img {
+            width: 130px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navbar ul li {
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            font-size: 14px;
+        }
+
+        .navbar ul li a:hover {
+            background: black;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: 230px;
+            min-height: 100vh;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        /* Process Section */
+        .process {
+            width: 100%;
+            padding: 50px 20px;
+            background: rgba(255, 217, 0, 0);
+            border-radius: 10px;
+            margin-bottom: auto;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Process Box */
+        .step.box {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1 1 30%;
+            text-align: center;
+            min-width: 250px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 5px;
+            background: black;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+            }
+            .container {
+                margin-left: 0;
+            }
+            footer {
+                width: 100%;
+                left: 0;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Your Logo" />
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="skills.html">Expertise and Skills</a></li>
+                <!--<li><a href="clients.html">Clients</a></li>-->
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content">
+            <section class="process">
+                <h1>How We Work</h1>
+                <p>We focus on a client-centric approach, ensuring that every solution aligns with business goals:</p>
+                <div class="process-steps">
+                    <div class="step box">
+                        <h2>Understanding Your Needs</h2>
+                        <p>We analyze business needs, gather key requirements, and collaborate to understand challenges.</p>
+                    </div>
+                    <div class="step box">
+                        <h2>Strategic Planning</h2>
+                        <p>We create a roadmap with milestones, ensuring alignment with your vision.</p>
+                    </div>
+                    <div class="step box">
+                        <h2>Agile Development</h2>
+                        <p>Using agile methodologies, we iterate with feedback to adapt to evolving needs.</p>
+                    </div>
+                    <div class="step box">
+                        <h2>Quality Assurance</h2>
+                        <p>We conduct rigorous testing to ensure high standards of performance and security.</p>
+                    </div>
+                    <div class="step box">
+                        <h2>On-Time Delivery</h2>
+                        <p>Carefully managing milestones, we meet deadlines without compromising quality.</p>
+                    </div>
+                    <div class="step box">
+                        <h2>Post-Deployment Support</h2>
+                        <p>We offer continuous support, monitoring, and optimization for robust solutions.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
