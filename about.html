@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <title>About Us | ANS AI MINDS</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <script defer src="assets/js/script.js"></script>
@@ -13,6 +13,10 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html, body {
+            overflow-x: hidden;
+        }
+        
         body, h1, h2, h3, h4, h5, h6, p, a, span, li {
             color: gold !important;
 
@@ -107,7 +111,7 @@
 
         /* Transparent Box for Sections */
         .section-box {
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            background: rgba(0, 0, 0, 0.8); /* Dark overlay for readability */
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -125,7 +129,8 @@
             flex-wrap: wrap;
             width: 80%;
             max-width: 10000px;
-            margin-left: -5%;
+            margin: 0 auto;
+
         }
 
        /* Make each vision and mission box equal */
@@ -135,7 +140,7 @@
         }
 
         .client-box {
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            background: rgba(0, 0, 0, 0.56); /* Semi-transparent black */
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 15px;
@@ -178,68 +183,11 @@
 
         /* Stat Description */
         .stat-box p {
-            color: white;
+            color: gold;
             font-size: 14px;
         }
 
-        /* Feedback Section Container */
-        .feedback {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            width: 60%; /* Reduce the width */
-            margin: 0 auto 10px auto; /* Reduce bottom margin */
-            border-radius: 10px; /* Add rounded corners */
-            text-align: center;
-            padding-bottom: 10px; /* Reduce bottom padding */
-            height: auto; /* Ensures no unnecessary extra space */
-            max-height: 600px; /* Adjust based on content */
-            overflow: hidden; /* Prevents extra spacing */
-        }
-
-
-        /* Feedback Header */
-        .feedback h2 {
-            color: gold;
-            font-size: 32px;
-            margin-bottom: 10px;
-            margin-left: -70%;
-        }
-
-        /* Center the feedback slider */
-        .feedback-slider {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            max-width: 600px; /* Reduce max-width */
-            margin: 0 auto; /* Center horizontally */
-            height: 350px; /* Adjust height as needed */
-            margin-left: -50%;
-        }
-
-        /* Feedback Box */
-        .feedback-box {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 80%;
-            box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-            position: absolute;
-            width: 80%;
-            left: 50%;
-            transform: translateX(-50%); /* Center the box */
-            text-align: center;
-        }
-
-        .feedback-box.active {
-            opacity: 1;
-            position: relative;
-        }
-
+    
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -273,7 +221,7 @@
         .section-box h1, 
         .section-box h2, 
         .section-box p {
-             color: rgb(191, 175, 87) !important;
+             color: gold !important;
         }
         
 
@@ -295,7 +243,7 @@
         @media (max-width: 768px) {
             .sidebar {
                 width: 100%;
-                position: relative;
+                position: fixed;
             }
             .container {
                 margin-left: 0;
@@ -303,29 +251,271 @@
             footer {
                 width: 100%;
                 left: 0;
-                position: relative;
+                position: fixed;
             }
         }
+
+        /* Mobile Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .hamburger-menu div {
+            width: 25px;
+            height: 4px;
+            margin: 5px;
+            background-color: gold;
+            transition: 0.3s;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: black;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu li {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid gold;
+        }
+
+        .mobile-menu li:first-child {
+            border-top: none;
+        }
+
+        .mobile-menu li a {
+            padding: 15px;
+            font-size: 18px;
+            color: gold;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-menu li a:hover {
+            background: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none; /* Hide sidebar on mobile */
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            footer {
+                width: 100%;
+                left: 0;
+                position: fixed;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+        }
+
+        /* 🌟 General Feedback Section Styling */
+.feedback {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    height: auto;
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🌟 Feedback Header */
+.feedback h2 {
+    color: gold;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+/* 🔹 Desktop Version */
+@media (min-width: 1024px) {
+    .feedback {
+        text-align: left; /* Aligns header and content properly */
+    }
+
+    .feedback h2 {
+        margin-left: -20px; /* Moves header towards left */
+        text-align: left;
+    }
+
+    .feedback-slider {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        max-width: 600px;
+        height: 350px;
+        margin: 0 auto;
+        transform: translateX(-30%); /* Moved slightly more left */
+    }
+
+    .feedback-box {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        max-width: 80%;
+        box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+        width: 100%; /* Ensure full width usage */
+        text-align: left; /* Aligns text properly */
+        left: -5%; /* Moves box slightly more left */
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .feedback-box.active {
+        opacity: 1;
+        position: relative;
+    }
+}
+
+
+/* 🔹 Mobile Version */
+@media (max-width: 768px) {
+    .feedback {
+        width: 95%;
+        max-height: none;
+        padding: 10px;
+    }
+
+    .feedback h2 {
+        font-size: 16px;
+    }
+
+    .feedback-slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        height: auto !important;
+        position: relative;
+    }
+
+    .feedback-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+        min-height: 250px;
+        background: rgba(255, 255, 255, 0.04);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .feedback-box.active {
+        opacity: 1;
+        position: relative;
+    }
+}
+@media (max-width: 768px) {
+    .mission-vision {
+        margin-left: -10px; /* Adjust this value as needed */
+    }
+
+    .mission-vision .section-box {
+        padding-left: 5px; /* Fine-tune if needed */
+    }
+}
+
+
+        
     </style>
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Your Logo" />
+    <div class="container">
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="skills.html">Expertise and Skills</a></li>
-                <!--<li><a href="clients.html">Clients</a></li>-->
-                <li><a href="products.html">Our Products</a></li>
-                <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
+
+        <!-- Mobile Menu Links -->
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="skills.html" onclick="closeMobileMenu()">Expertise & Skills</a></li>
+            <li><a href="process.html" onclick="closeMobileMenu()">How We Work</a></li>
+            <li><a href="products.html" onclick="closeMobileMenu()">Our Products</a></li>
+            <li><a href="why-choose-us.html" onclick="closeMobileMenu()">Why Choose Us?</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+        </ul>
+
+        <!-- Sidebar Navigation (Visible on Desktop) -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Your Logo" />
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">Expertise & Skills</a></li>
+                    <li><a href="process.html">How We Work</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
 
     <!-- Main Content -->
     <div class="content">
@@ -488,5 +678,23 @@
     <footer>
         <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Toggle the mobile menu visibility and content fade
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const content = document.getElementById('content');
+            mobileMenu.classList.toggle('open');
+            content.classList.toggle('hidden');
+        }
+
+        // Close the mobile menu after clicking on a link
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const content = document.getElementById('content');
+            mobileMenu.classList.remove('open');
+            content.classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>

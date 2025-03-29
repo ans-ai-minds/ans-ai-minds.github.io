@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <meta name="description" content="How We Work - Learn about our process and approach.">
     <title>How We Work | ANS AI MINDS</title>
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -83,7 +83,7 @@
             display: flex;
             flex-direction: column;
             flex: 1;
-            margin-left: 230px;
+            margin-left: 160px;
             min-height: 100vh;
         }
 
@@ -95,6 +95,28 @@
             text-align: center;
             flex-grow: 1;
         }
+
+        .process-heading {
+            text-align: center;
+            background-color: #121212; /* Dark background */
+            color: white; /* White text */
+            padding: 50px 20px;
+            margin-bottom: 30px; /* Spacing before process steps */
+        }
+        
+        .process-heading h1 {
+            font-size: 32px; /* Larger heading */
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .process-heading p {
+            font-size: 18px; /* Larger paragraph text */
+            font-weight: normal;
+            max-width: 800px;
+            margin: 0 auto; /* Centers text */
+        }
+        
 
         /* Process Section */
         .process {
@@ -143,7 +165,8 @@
                 position: relative;
             }
             .container {
-                margin-left: 0;
+                margin-left: 20px;
+                margin-right: 10px;
             }
             footer {
                 width: 100%;
@@ -151,34 +174,149 @@
                 position: relative;
             }
         }
+
+        /* Mobile Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .hamburger-menu div {
+            width: 25px;
+            height: 4px;
+            margin: 5px;
+            background-color: gold;
+            transition: 0.3s;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: black;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu li {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid gold;
+        }
+
+        .mobile-menu li:first-child {
+            border-top: none;
+        }
+
+        .mobile-menu li a {
+            padding: 15px;
+            font-size: 18px;
+            color: gold;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-menu li a:hover {
+            background: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none; /* Hide sidebar on mobile */
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            footer {
+                width: 100%;
+                left: 0;
+                position: relative;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Your Logo" />
+    <div class="container">
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="skills.html">Expertise and Skills</a></li>
-                <!--<li><a href="clients.html">Clients</a></li>-->
-                <li><a href="products.html">Our Products</a></li>
-                <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
+
+        <!-- Mobile Menu Links -->
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="skills.html" onclick="closeMobileMenu()">Expertise & Skills</a></li>
+            <li><a href="products.html" onclick="closeMobileMenu()">Our Products</a></li>
+            <li><a href="why-choose-us.html" onclick="closeMobileMenu()">Why Choose Us?</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+        </ul>
+
+        <!-- Sidebar Navigation (Visible on Desktop) -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Your Logo" />
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="skills.html">Expertise & Skills</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
 
     <!-- Main Content -->
     <div class="container">
         <div class="content">
-            <section class="process">
+
+            <section class="process-heading">
                 <h1>How We Work</h1>
                 <p>We focus on a client-centric approach, ensuring that every solution aligns with business goals:</p>
+            </section>
+
+            <section class="process">
+                
+                
                 <div class="process-steps">
                     <div class="step box">
                         <h2>Understanding Your Needs</h2>
@@ -213,6 +351,24 @@
     <footer>
         <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Toggle the mobile menu visibility and content fade
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const content = document.getElementById('content');
+            mobileMenu.classList.toggle('open');
+            content.classList.toggle('hidden');
+        }
+
+        // Close the mobile menu after clicking on a link
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const content = document.getElementById('content');
+            mobileMenu.classList.remove('open');
+            content.classList.remove('hidden');
+        }
+    </script>
 
 </body>
 </html>

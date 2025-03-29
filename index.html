@@ -2,34 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home | ANS AI MINDS</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script defer src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <style>
-        /* Global Styling */
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        
-        
+        body, h1, h2, h3, h4, h5, h6, p, span, li {
+            color: gold !important;
+        }
+
         body {
+            overflow-x: hidden;
             display: flex;
             flex-direction: column;
             margin: 0;
             min-height: 100vh;
-        }
-
-        /* Main Container */
-        .container {
-            display: flex;
-            flex: 1;
+            background: url('assets/images/background.webp') no-repeat center center;
+            background-size: cover;
+            color: gold;
         }
 
         /* Sidebar */
         .sidebar {
             width: 230px;
-            background-color: Black;
-            color:gold;
+            background-color: black;
+            color: gold;
             display: flex;
             flex-direction: column;
             padding-top: 20px;
@@ -72,24 +76,20 @@
         }
 
         .navbar ul li a:hover {
-            background:black;
+            background: black;
         }
-        /* Content Section with Fullscreen Background */
+
+        /* Content Section */
         .content {
-            margin-left: 70px; /* Matches sidebar width */
-            margin-right: -153px;
-            margin-bottom: -120px;
-            top:-50px;
-            width: 9000%; /* Ensures content takes full width minus sidebar */
-            height: 110vh; /* Makes it full screen */
-            background: url('assets/images/background.webp') no-repeat center center;
-            background-size: cover; /* Ensures the image covers the entire area */
-            position: relative;
-            color: gold; /* Updated text color */
+            margin-left: 230px; /* Adjust to match sidebar width */
+            flex: 1;
             display: flex;
-            justify-content: center; /* Centers content horizontally */
-            align-items: center; /* Centers content vertically */
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            height: 100vh;
+            position: relative;
+            padding: 20px;
         }
 
         /* Overlay for better readability */
@@ -98,10 +98,11 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%; /* Fix width to match the content */
+            width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
             z-index: 1;
+            display: none;
         }
 
         .content section {
@@ -110,24 +111,32 @@
             max-width: 80%;
         }
 
-        /* Text Styling */
-        .content h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: gold; /* Ensuring header text is also gold */
+        /* Hero Section with Light Black Background */
+        .hero {
+            background: rgba(0, 0, 0, 0.85); /* Light black background */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            max-width: 100%;
         }
 
-        .content p {
+        /* Text Styling */
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
             font-size: 18px;
             margin-bottom: 20px;
-            color: gold;
         }
 
         /* Button Styling */
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            background: gold; /* Gold button */
+            background: gold;
             color: black;
             text-decoration: none;
             font-size: 16px;
@@ -137,59 +146,253 @@
         }
 
         .btn:hover {
-            background: #d4af37; /* Darker gold on hover */
+            background: #d4af37;
         }
-
 
         /* Footer */
         footer {
-        text-align: center;
-        padding: 10px;
-        background: black;
-        color: #FFD700; /* Brighter gold */
-        font-size: 20px; /* Increased text size */
-        font-weight: bold;
-        width: 85%;
-        position: relative;
-        left: 220px;
+            text-align: center;
+            padding: 5px;
+            background: black;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Mobile Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .hamburger-menu div {
+            width: 25px;
+            height: 4px;
+            margin: 5px;
+            background-color: gold;
+            transition: 0.3s;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: black;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu li {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid gold;
+        }
+
+        .mobile-menu li:first-child {
+            border-top: none;
+        }
+
+        .mobile-menu li a {
+            padding: 15px;
+            font-size: 18px;
+            color: gold;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-menu li a:hover {
+            background: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none; /* Hide sidebar on mobile */
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            footer {
+                width: 100%;
+                left: 0;
+                position: relative;
+            }
+
+            .hero {
+                max-width: 90%; /* Adjusts for smaller screens */
+                padding: 15px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+
+            /* Square Button Styling (Responsive) */
+            .square-button {
+                position: fixed;
+                bottom: 150px; /* Move the button up a little */
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 12px 30px;
+                background-color: gold;
+                color: black;
+                font-size: 16px;
+                font-weight: bold;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                border-radius: 25px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+                z-index: 1000;
+            }
+
+            .square-button:hover {
+                background-color: #d4af37;
+                transform: translateX(-50%) translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+
+            .square-button:active {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            /* Hide content and square button when mobile menu is open */
+            .mobile-menu.open ~ .content,
+            .mobile-menu.open ~ .square-button {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) {
+            /* Desktop Square Button */
+            .square-button {
+                position: fixed;
+                bottom: 150px;
+                left: 58%;
+                transform: translateX(-50%);
+                padding: 12px 30px;
+                background-color: gold;
+                color: black;
+                font-size: 16px;
+                font-weight: bold;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                border-radius: 25px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+                z-index: 1000;
+            }
+
+            .square-button:hover {
+                background-color: #d4af37;
+                transform: translateX(-50%) translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+
+            .square-button:active {
+                transform: translateX(-50%) translateY(0);
+            }
         }
 
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar Navigation -->
-        <div class="sidebar">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="Your Logo" />
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="skills.html">Expertise & Skills</a></li>
-                    <li><a href="process.html">How We Work</a></li>
-                    <!--<li><a href="clients.html">Clients</a></li>-->
-                    <li><a href="products.html">Our Products</a></li>
-                    <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
 
-        <!-- Main Content -->
-        <div class="content">
-            <section class="hero">
-                <h1>Welcome to ANS AI MINDS</h1>
-                <p>Your trusted partner for professional services.</p>
-                <p>Empowering Businesses with AI, Web Development & Advanced Technologies</p>
-                <a href="contact.html" class="btn">Get in Touch</a>
-            </section>
+    <!-- Sidebar Navigation (Desktop) -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Your Logo" />
         </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="skills.html">Expertise & Skills</a></li>
+                <li><a href="process.html">How We Work</a></li>
+                <li><a href="products.html">Our Products</a></li>
+                <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="hamburger-menu" onclick="toggleMobileMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul class="mobile-menu" id="mobile-menu">
+        <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+        <li><a href="skills.html" onclick="closeMobileMenu()">Expertise & Skills</a></li>
+        <li><a href="process.html" onclick="closeMobileMenu()">How We Work</a></li>
+        <li><a href="products.html" onclick="closeMobileMenu()">Our Products</a></li>
+        <li><a href="why-choose-us.html" onclick="closeMobileMenu()">Why Choose Us?</a></li>
+        <li><a href="contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+    </ul>
+
+    <!-- Main Content -->
+    <div class="content" id="content">
+        <section class="hero">
+            <h1>Welcome to ANS AI MINDS</h1>
+            <p>Your trusted partner for professional services.</p>
+            <p>Empowering Businesses with AI, Web Development & Advanced Technologies</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </section>
+    </div>
+
+    <!-- Square Button (Desktop and Mobile) -->
+    <a href="course/course.html" class="square-button">Learning Corner (Certification/Course/Internship)</a>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Your Company. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('open');
+        }
+
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.remove('open');
+        }
+    </script>
 </body>
 </html>

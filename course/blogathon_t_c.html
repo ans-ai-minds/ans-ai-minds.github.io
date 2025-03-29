@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Our Courses, Internships, Ideathon, and Blogathon opportunities at ANS AI MINDS.">
+    <title>Our Courses & Opportunities | ANS AI MINDS</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR-REAL-KIT-ID.js" crossorigin="anonymous"></script>
+    <style>
+        
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li {
+            color: gold !important;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            background: url('../assets/images/Background.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Logo */
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .logo img {
+            width: 150px; /* Adjust the size of your logo */
+            height: auto;
+        }
+
+        /* Home Button */
+        .home-button {
+            position: fixed;
+            top: 30px; /* Adjust this value to give space for the logo */
+            left: 250px;
+            background-color: black;
+            color: gold;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .home-button:hover {
+            background-color: gold;
+            color: black;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-top: 60px; /* Adjust to make space for the home button */
+            padding: 20px;
+            width: 80%; /* Default width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        /* Course and Internship Section */
+        .section-box {
+            width: 100%; /* Full width for smaller screens */
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.95);
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.95);
+        }
+
+        .section-box h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section-box ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .section-box ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .section-box .fee-info {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .internship-fees table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .internship-fees table, th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .internship-fees table th {
+            background-color: black;
+            color: gold;
+        }
+
+        /* Flexbox for Course Description and Table */
+        .course-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .course-description {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .course-details {
+            width: 100%;
+            max-width: 800px; /* Limit the width of the table */
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .course-details table {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .course-details th, .course-details td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        .course-details th {
+            background-color: black;
+            color: gold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 5px;
+            background: black;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 80px; /* Adjust for mobile */
+                width: 95%; /* Decrease width to fit better on smaller screens */
+                padding: 15px; /* Reduce padding */
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .section-box {
+                padding: 15px; /* Reduce padding for mobile */
+            }
+
+            .section-box h2 {
+                font-size: 25px; /* Adjust heading size */
+            }
+
+            .section-box ul li {
+                font-size: 16px; /* Adjust list item font size */
+            }
+
+            .course-container {
+                flex-direction: column; /* Stack items on smaller screens */
+                align-items: stretch;
+            }
+
+            .course-description {
+                margin-right: 0;
+            }
+
+            .course-details {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="../assets/images/logo.png" alt="Your Logo" />
+    </div>
+
+    <!-- Home Button -->
+    <a href="../index.html" class="home-button">Home</a>
+
+    <div class="container">
+        <!-- Main Content -->
+        <div class="content">
+		
+		<section class="section-box">
+    <h2>Consent to Publish</h2>
+    <h4>
+        By submitting your blog for the Blogathon organized by Ans AI Minds, you acknowledge and agree to the following terms regarding the publication of your content:
+        <br><br>
+        <strong>1. Permission to Publish:</strong> You grant Ans AI Minds the right to publish, distribute, and promote your blog post on their official website, social media platforms (such as LinkedIn, Twitter, and YouTube), and other digital channels. This includes, but is not limited to, sharing the blog through newsletters, email campaigns, and any other promotional efforts.
+        <br><br>
+        <strong>2. Content Ownership:</strong> You retain the ownership of your blog content. However, by submitting it for publication, you grant Ans AI Minds a non-exclusive, royalty-free license to use, edit, and share the content for promotional, educational, and marketing purposes. This means Ans AI Minds can freely use your blog for various promotional materials without any further consent or compensation.
+        <br><br>
+        <strong>3. Right to Modify:</strong> You acknowledge that Ans AI Minds may edit, modify, or format your blog to align with the platform’s style, length, or content standards. This may include minor grammatical edits, reformatting, and adjustments for clarity and readability.
+        <br><br>
+        <strong>4. Publicity:</strong> By agreeing to publish your blog, you consent to the public sharing of your work. Your blog may be shared on Ans AI Minds' website and social media channels, and you understand that this may give you exposure to a global audience. Your name and any associated social media profiles may also be included in the publication for proper attribution.
+        <br><br>
+        <strong>5. Withdrawal of Consent:</strong> If you wish to withdraw your consent after submitting your blog, you must notify Ans AI Minds in writing. While you retain the right to request removal, you understand that once the blog has been published and shared publicly, it may not be possible to completely retract it from all platforms.
+        <br><br>
+        <strong>6. No Compensation:</strong> You agree that there is no monetary compensation for the publication of your blog, and you will not receive any royalty payments for the use of your content by Ans AI Minds. The opportunity to showcase your work and gain exposure is the primary benefit.
+        <br><br>
+        <strong>7. Acknowledgment of Terms:</strong> By checking the consent box and submitting your blog, you confirm that you have read, understood, and agree to these terms. You also confirm that the blog is your original work, free from plagiarism, and that you have the legal right to publish it.
+    </h4>
+</section>
+
+<section class="section-box">
+    <h2>Agreement to Terms and Conditions</h2>
+    <h4>
+        By submitting your blog for the Blogathon organized by Ans AI Minds, you, the participant, agree to abide by and comply with the following terms and conditions:
+        <br><br>
+
+        <strong>1. Eligibility for Participation:</strong> The Blogathon is open to individuals of all backgrounds and experience levels, provided they are at least 18 years of age or have obtained parental consent if under 18.  
+        You must submit original content, and the blog must not infringe on any third-party copyrights, trademarks, or intellectual property rights.
+        <br><br>
+
+        <strong>2. Submission Guidelines:</strong> You agree to submit a blog post on a technology-related topic of your choice.  
+        The blog post must adhere to the word limit, formatting requirements, and any other guidelines specified by Ans AI Minds.  
+        Submissions must be original and not published previously elsewhere. Plagiarism in any form will result in disqualification from the Blogathon.
+        <br><br>
+
+        <strong>3. Ownership and Licensing:</strong> You retain the full ownership of your blog content, but by submitting it for the Blogathon, you grant Ans AI Minds a non-exclusive, royalty-free, and worldwide license to use, publish, distribute, and promote your content across its platforms and through other marketing channels.  
+        This license also allows Ans AI Minds to edit, modify, or adapt the blog post for formatting, clarity, or other purposes as needed.
+        <br><br>
+
+        <strong>4. Publication and Promotion:</strong> You agree to allow Ans AI Minds to publish your blog on its website, social media channels (including LinkedIn, Twitter, YouTube), and in any promotional or marketing materials.  
+        Your blog may be shared with a global audience, and by agreeing to the terms, you understand that your work will be made publicly accessible online.
+        <br><br>
+
+        <strong>5. No Compensation:</strong> You understand that there is no monetary compensation for submitting a blog post to the Blogathon. Your participation in the Blogathon is for the opportunity to showcase your expertise, gain recognition, and contribute to the community.  
+        However, you may gain exposure through the publication of your blog post on Ans AI Minds’s platforms.
+        <br><br>
+
+        <strong>6. Content Review and Approval:</strong> Ans AI Minds reserves the right to review and approve all submitted blog posts before they are published. This review ensures that the content aligns with the blogathon guidelines, is free from plagiarism, and meets editorial standards.  
+        If your blog post requires modifications, you will be notified and given an opportunity to make necessary changes before final approval and publication.
+        <br><br>
+
+        <strong>7. Confidentiality:</strong> You agree to respect any confidentiality requirements related to the blog content, particularly if your topic involves proprietary or sensitive information. You must not disclose confidential information in your blog posts unless you have explicit permission to do so.
+        <br><br>
+
+        <strong>8. Compliance with Applicable Laws:</strong> You agree to comply with all relevant laws, including copyright laws, and any other legal requirements regarding content creation, publication, and sharing.  
+        Any content that violates the law, infringes on intellectual property rights, or contains defamatory, discriminatory, or harmful material will be immediately disqualified.
+        <br><br>
+
+        <strong>9. Indemnity:</strong> By participating in the Blogathon, you agree to indemnify and hold Ans AI Minds, its affiliates, and its representatives harmless from any legal claims, liabilities, or damages arising from your blog submission, including claims of plagiarism or copyright infringement.
+        <br><br>
+
+        <strong>10. Disqualification:</strong> Failure to adhere to these terms and conditions, including submitting plagiarized content or violating the submission guidelines, may lead to disqualification from the Blogathon.  
+        Ans AI Minds reserves the right to disqualify any participant who engages in dishonest, fraudulent, or unethical behavior.
+        <br><br>
+
+        <strong>11. Dispute Resolution:</strong> Any disputes arising from these terms and conditions will be resolved through negotiation or, if necessary, binding arbitration. The laws of the country in which Ans AI Minds is based will govern any disputes.
+        <br><br>
+
+        <strong>12. Amendments to Terms:</strong> Ans AI Minds reserves the right to modify or update these Terms and Conditions at any time, with or without notice. Any changes to these terms will be communicated to participants in advance.
+        <br><br>
+
+        <strong>13. Acknowledgment and Agreement:</strong> By submitting your blog for the Blogathon, you acknowledge that you have read, understood, and agreed to these Terms and Conditions.  
+        Your submission indicates your acceptance of these terms and confirms that you have the necessary rights to publish your blog content.
+    </h4>
+</section>
+
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

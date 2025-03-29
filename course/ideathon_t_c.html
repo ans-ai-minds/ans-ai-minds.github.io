@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Our Courses, Internships, Ideathon, and Blogathon opportunities at ANS AI MINDS.">
+    <title>Our Courses & Opportunities | ANS AI MINDS</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR-REAL-KIT-ID.js" crossorigin="anonymous"></script>
+    <style>
+        
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li {
+            color: gold !important;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            background: url('../assets/images/Background.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Logo */
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .logo img {
+            width: 150px; /* Adjust the size of your logo */
+            height: auto;
+        }
+
+        /* Home Button */
+        .home-button {
+            position: fixed;
+            top: 30px; /* Adjust this value to give space for the logo */
+            left: 250px;
+            background-color: black;
+            color: gold;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .home-button:hover {
+            background-color: gold;
+            color: black;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-top: 60px; /* Adjust to make space for the home button */
+            padding: 20px;
+            width: 80%; /* Default width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        /* Course and Internship Section */
+        .section-box {
+            width: 100%; /* Full width for smaller screens */
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.95);
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.95);
+        }
+
+        .section-box h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section-box ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .section-box ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .section-box .fee-info {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .internship-fees table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .internship-fees table, th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .internship-fees table th {
+            background-color: black;
+            color: gold;
+        }
+
+        /* Flexbox for Course Description and Table */
+        .course-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .course-description {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .course-details {
+            width: 100%;
+            max-width: 800px; /* Limit the width of the table */
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .course-details table {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .course-details th, .course-details td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        .course-details th {
+            background-color: black;
+            color: gold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 5px;
+            background: black;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 80px; /* Adjust for mobile */
+                width: 95%; /* Decrease width to fit better on smaller screens */
+                padding: 15px; /* Reduce padding */
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .section-box {
+                padding: 15px; /* Reduce padding for mobile */
+            }
+
+            .section-box h2 {
+                font-size: 25px; /* Adjust heading size */
+            }
+
+            .section-box ul li {
+                font-size: 16px; /* Adjust list item font size */
+            }
+
+            .course-container {
+                flex-direction: column; /* Stack items on smaller screens */
+                align-items: stretch;
+            }
+
+            .course-description {
+                margin-right: 0;
+            }
+
+            .course-details {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="../assets/images/logo.png" alt="Your Logo" />
+    </div>
+
+    <!-- Home Button -->
+    <a href="../index.html" class="home-button">Home</a>
+
+    <div class="container">
+        <!-- Main Content -->
+        <div class="content">
+		
+		<section class="section-box">
+    <h2>Consent to Record</h2>
+    <h4>
+        By participating in the Ideathon organized by Ans AI Minds, you acknowledge and agree to the following terms regarding the recording and broadcasting of the event:
+        <br><br>
+        <strong>1. Recording and Broadcast:</strong> You consent to being recorded during the Ideathon event, including but not limited to the live discussions, presentations, and any other activities where your participation may be captured in audio or video format. The session may be recorded by Ans AI Minds for the purpose of sharing, promoting, and distributing the content.
+        <br><br>
+        <strong>2. Use of Recorded Content:</strong> You grant Ans AI Minds the right to use the recorded content, which may include your voice, image, presentation, and any other contributions made during the event, for educational, promotional, and marketing purposes. This content may be shared publicly through various platforms, including but not limited to YouTube, LinkedIn, the Ans AI Minds website, and social media channels.
+        <br><br>
+        <strong>3. Public Exposure:</strong> By consenting to this recording, you understand and agree that your participation may be broadcasted to a global audience through digital platforms. The session will be made available for public viewing, and your idea and contributions may be heard, viewed, and accessed by a wide audience.
+        <br><br>
+        <strong>4. No Compensation:</strong> You acknowledge that Ans AI Minds may use the recorded content without any obligation to provide compensation, royalties, or any other form of remuneration. The use of your recorded material will be solely for the purposes mentioned above.
+        <br><br>
+        <strong>5. Right to Edit and Modify:</strong> You consent to Ans AI Minds editing, modifying, or otherwise altering the recorded content as necessary to fit the context of promotional materials, podcasts, and public broadcasts. This may include editing the video/audio for clarity, length, or other purposes that align with the goals of the Ideathon.
+        <br><br>
+        <strong>6. Waiver of Claims:</strong> By providing your consent, you waive any rights to inspect or approve the final version of the recorded content or how it is used. You also waive any claims or rights to compensation for the use of your name, likeness, voice, and contributions in the recorded content.
+        <br><br>
+        <strong>7. Withdrawal of Consent:</strong> If you wish to withdraw your consent to be recorded or broadcasted after agreeing to participate, you must inform Ans AI Minds in writing before the start of the recording. However, once the session is recorded and broadcasted, you acknowledge that it may not be possible to retract or remove the content from public platforms.
+        <br><br>
+        <strong>8. Acknowledgment of Consent:</strong> By submitting your registration and participating in the Ideathon, you confirm that you have read, understood, and agree to the terms outlined in this Consent to Record. You further acknowledge that you are providing consent voluntarily and without any duress or coercion.
+    </h4>
+</section>
+
+<section class="section-box">
+    <h2>Agreement to Terms and Conditions</h2>
+    <h4>
+        <strong>Terms and Conditions for Participation in the Ideathon by Ans AI Minds</strong>
+        <br><br>
+        By participating in the Ideathon organized by Ans AI Minds, you (the participant) agree to abide by the following Terms and Conditions:
+        <br><br>
+        <strong>1. Eligibility:</strong> Participation is open to individuals and teams from any background, provided they are at least 18 years of age or have obtained parental consent if under 18. Participants must submit original ideas. Plagiarism or submission of any idea that violates intellectual property rights will result in disqualification.
+        <br><br>
+        <strong>2. Registration:</strong> Participants must complete the registration process by providing accurate personal details and a valid email address. Incomplete or false submissions will be disqualified.
+        <br><br>
+        <strong>3. Idea Submission:</strong> By submitting your idea, you confirm that it is your original work and does not infringe on any third-party intellectual property. Each idea must include a problem description, proposed solution, and potential impact. Prototypes or proof of concept are optional.
+        <br><br>
+        <strong>4. Evaluation and Selection:</strong> All ideas will be reviewed by experts at Ans AI Minds. The decision of the judges is final. Selected ideas will be discussed with the Ans AI Minds team, and the session may be recorded for promotional purposes.
+        <br><br>
+        <strong>5. Consent to Recording and Broadcast:</strong> By participating, you consent to being recorded. Recordings may be shared on platforms like YouTube and LinkedIn for marketing and educational purposes without further consent or compensation.
+        <br><br>
+        <strong>6. Ownership of Ideas:</strong> Participants retain ownership but grant Ans AI Minds a non-exclusive, royalty-free license to use ideas for evaluation, feedback, and promotion. Selected participants may receive collaboration or partnership offers.
+        <br><br>
+        <strong>7. Plagiarism Policy:</strong> Plagiarized content, including ideas, designs, or prototypes, will result in disqualification. Copying without attribution is prohibited.
+        <br><br>
+        <strong>8. Confidentiality:</strong> Participants must keep any confidential information disclosed during the Ideathon or subsequent discussions confidential and not share proprietary details without prior consent.
+        <br><br>
+        <strong>9. Terms of Use:</strong> Participants agree to adhere to these terms and any additional rules set forth by Ans AI Minds. Terms may be updated, and participants will be notified of significant changes.
+        <br><br>
+        <strong>10. Liability Disclaimer:</strong> Ans AI Minds is not responsible for any loss, damage, or disputes arising from participation, including technical issues or intellectual property conflicts.
+        <br><br>
+        <strong>11. Prizes and Recognition:</strong> Selected participants will receive recognition, and their ideas may be featured on Ans AI Minds platforms. Awards and benefits are at the discretion of Ans AI Minds.
+        <br><br>
+        <strong>12. Governing Law and Dispute Resolution:</strong> These terms are governed by the laws of the country where Ans AI Minds operates. Disputes will be resolved through negotiation or binding arbitration.
+        <br><br>
+        <strong>13. Indemnity:</strong> Participants agree to indemnify and hold harmless Ans AI Minds from any claims, liabilities, or damages arising from participation in the Ideathon.
+        <br><br>
+        <strong>14. Privacy Policy:</strong> Personal data collected will be used solely for Ideathon-related purposes in accordance with Ans AI Minds' Privacy Policy.
+        <br><br>
+        <strong>15. Acceptance of Terms:</strong> By submitting an idea, participants confirm they have read, understood, and agreed to these Terms and Conditions. Those who do not agree should not participate.
+    </h4>
+</section>
+
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

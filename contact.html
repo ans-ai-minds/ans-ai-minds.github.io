@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <meta name="description" content="Contact Us - Get in touch for inquiries, collaborations, or support.">
     <title>Contact Us | ANS AI MINDS</title>
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -33,6 +33,7 @@
         .sidebar {
             width: 230px;
             background-color: black;
+            color: gold;
             display: flex;
             flex-direction: column;
             padding-top: 20px;
@@ -68,29 +69,30 @@
 
         .navbar ul li a {
             text-decoration: none;
+            color: gold;
             display: block;
             padding: 8px 10px;
             font-size: 14px;
-            color: rgb(191, 175, 87);
         }
 
         .navbar ul li a:hover {
             background: black;
         }
 
+
         /* Main Content */
         .container {
             display: flex;
             flex-direction: column;
             flex: 1;
-            margin-left: 230px;
+            margin-left: 150px;
             min-height: 100vh;
             align-items: center;
             text-align: center;
         }
 
         .content {
-            padding: 20px;
+            padding: 50px;
             flex-grow: 1;
         }
 
@@ -157,6 +159,12 @@
             left: 0;
         }
 
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .sidebar {
@@ -164,7 +172,9 @@
                 position: relative;
             }
             .container {
-                margin-left: 0;
+                margin-left: 20px;
+                margin-right: 10px;
+                
             }
             footer {
                 width: 100%;
@@ -172,25 +182,136 @@
                 position: relative;
             }
         }
+        /* Mobile Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .hamburger-menu div {
+            width: 25px;
+            height: 4px;
+            margin: 5px;
+            background-color: gold;
+            transition: 0.3s;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: black;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu li {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid gold;
+        }
+
+        .mobile-menu li:first-child {
+            border-top: none;
+        }
+
+        .mobile-menu li a {
+            padding: 15px;
+            font-size: 18px;
+            color: gold;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-menu li a:hover {
+            background: #333;
+        }
+        
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none; /* Hide sidebar on mobile */
+            }
+
+            .content {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            footer {
+                width: 100%;
+                left: 0;
+                position: relative;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Your Logo" />
+    <div class="container">
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="skills.html">Our Expertise and Skills</a></li>
-                <li><a href="process.html">How We Work</a></li>
-                <li><a href="products.html">Our Products</a></li>
-                <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-            </ul>
-        </nav>
-    </div>
+
+        <!-- Mobile Menu Links -->
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="skills.html" onclick="closeMobileMenu()">Expertise & Skills</a></li>
+            <li><a href="process.html" onclick="closeMobileMenu()">How We Work</a></li>
+            <li><a href="products.html" onclick="closeMobileMenu()">Our Products</a></li>
+            <li><a href="why-choose-us.html" onclick="closeMobileMenu()">Why Choose Us?</a></li>
+        </ul>
+
+        <!-- Sidebar Navigation (Visible on Desktop) -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Your Logo" />
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="skills.html">Expertise & Skills</a></li>
+                    <li><a href="process.html">How We Work</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                </ul>
+            </nav>
+        </div>
 
     <!-- Main Content -->
     <div class="container">
@@ -201,23 +322,13 @@
                 <div class="contact-content">
                     <div class="contact-info">
                         <h3>Contact Details</h3>
-                        <br><p><i class="fas fa-map-marker-alt"></i> Kolkata, West Bengal, India</p><br>
+                        <br><p><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</p><br>
                         <p><i class="fas fa-envelope"></i> ans@ans-ai-minds.com</p>
                         <p><i class="fas fa-envelope"></i> aritric@ans-ai-minds.com</p>
-                        <p><i class="fas fa-envelope"></i> sayan@ans-ai-minds.com</p>
+                        <p><i class="fas fa-envelope"></i> mrban@ans-ai-minds.com</p>
                         <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</p>
                         <p><i class="fas fa-question-circle"></i> Have an inquiry? <a href="https://forms.gle/tBfpHQTvzA4NQW498" target="_blank" style="color: rgb(191, 175, 87); text-decoration: underline;">Fill out our Inquiry Form</a></p>
                     </div>
-
-                    <!--<div class="contact-form">
-                        <h3>Send Us a Message</h3>
-                        <form id="contact-form">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                            <button type="submit">Send</button>
-                        </form>
-                    </div>-->
                 </div>
             </section>
         </div>
@@ -249,6 +360,25 @@
             alert("Error sending message. Try again later.");
         });
     });
+    // Toggle the mobile menu visibility and content fade
+    function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const content = document.getElementById('content');
+    mobileMenu.classList.toggle('open');
+    content.classList.toggle('hidden');
+    }
+
+    // Close the mobile menu after clicking on a link
+    function closeMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const content = document.getElementById('content');
+    mobileMenu.classList.remove('open');
+    content.classList.remove('hidden');
+    }
+
     </script>
+
+
+
 </body>
 </html>

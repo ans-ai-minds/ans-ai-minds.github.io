@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Our Courses, Internships, Ideathon, and Blogathon opportunities at ANS AI MINDS.">
+    <title>Our Courses & Opportunities | ANS AI MINDS</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR-REAL-KIT-ID.js" crossorigin="anonymous"></script>
+    <style>
+        
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, h1, h2, h3, h4, h5, h6, p, a, span, li {
+            color: gold !important;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            background: url('../assets/images/Background.webp') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Logo */
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .logo img {
+            width: 150px; /* Adjust the size of your logo */
+            height: auto;
+        }
+
+        /* Home Button */
+        .home-button {
+            position: fixed;
+            top: 30px; /* Adjust this value to give space for the logo */
+            left: 250px;
+            background-color: black;
+            color: gold;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+        }
+
+        .home-button:hover {
+            background-color: gold;
+            color: black;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-top: 60px; /* Adjust to make space for the home button */
+            padding: 20px;
+            width: 80%; /* Default width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        /* Course and Internship Section */
+        .section-box {
+            width: 100%; /* Full width for smaller screens */
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.75);
+        }
+
+        .section-box h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section-box ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .section-box ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .section-box .fee-info {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .internship-fees table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .internship-fees table, th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .internship-fees table th {
+            background-color: black;
+            color: gold;
+        }
+
+        /* Flexbox for Course Description and Table */
+        .course-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .course-description {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .course-details {
+            width: 100%;
+            max-width: 800px; /* Limit the width of the table */
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .course-details table {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .course-details th, .course-details td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        .course-details th {
+            background-color: black;
+            color: gold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 5px;
+            background: black;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 80px; /* Adjust for mobile */
+                width: 95%; /* Decrease width to fit better on smaller screens */
+                padding: 15px; /* Reduce padding */
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .section-box {
+                padding: 15px; /* Reduce padding for mobile */
+            }
+
+            .section-box h2 {
+                font-size: 25px; /* Adjust heading size */
+            }
+
+            .section-box ul li {
+                font-size: 16px; /* Adjust list item font size */
+            }
+
+            .course-container {
+                flex-direction: column; /* Stack items on smaller screens */
+                align-items: stretch;
+            }
+
+            .course-description {
+                margin-right: 0;
+            }
+
+            .course-details {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="../assets/images/logo.png" alt="Your Logo" />
+    </div>
+
+    <!-- Home Button -->
+    <a href="../index.html" class="home-button">Home</a>
+
+    <div class="container">
+        <!-- Main Content -->
+        <div class="content">
+            <h1>Our Courses & Opportunities</h1>
+
+            <section class="section-box">
+                <h2>1. Paid Courses</h2>
+                <p><strong>Live Weekly Classes (3 hours per session) - 1-Year Duration</strong></p><br>
+                <p>We offer a comprehensive set of courses, designed to provide you with the skills necessary for a successful career in technology. The curriculum includes the following core topics:</p>
+            
+                <div class="course-container">
+                    <!-- Text Content -->
+                    <div class="course-description"><br>
+                        <h3>Course Details</h3>
+                        <p>Detailed description of the courses and their duration.</p>
+                    </div>
+
+                    <!-- Course Table -->
+                    <div class="course-details">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Course Name</th>
+                                    <th>Duration</th>
+                                    <th>Fees</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3"><strong>Core Topics:</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Python Programming</td>
+                                    <td rowspan="9">1 Year</td>
+                                    <td rowspan="9">₹ 25,000 + GST (Total for all courses)</td>
+                                </tr>
+                                <tr>
+                                    <td>Exploratory Data Analysis (EDA)</td>                                
+                                </tr>
+                                <tr>
+                                    <td>Statistics</td>                                
+                                </tr>
+                                <tr>
+                                    <td>Machine Learning (ML)</td>
+                                </tr>
+                                <tr>
+                                    <td>Deep Learning (DL)</td>
+                                </tr>
+                                <tr>
+                                    <td>Natural Language Processing (NLP)</td>
+                                </tr>
+                                <tr>
+                                    <td>Computer Vision (CV)</td>
+                                </tr>
+                                <tr>
+                                    <td>Large Language Models (LLM)</td>
+                                </tr>
+                                <tr>
+                                    <td>Generative AI (GENAI)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <br>
+
+                        <h3><strong>Additional Program Inclusions</strong></h3>
+
+                        <table border="1" cellpadding="10">
+                            <tr>
+                                <th></th>
+                                <th><strong>Feature</strong></th>
+                            </tr>
+                            <tr>
+                                <td> 🟡 </td>
+                                <td><strong>25 Hands-on Projects</strong></td>
+                            </tr>
+                            <tr>
+                                <td> 🟡 </td>
+                                <td><strong>2 Case Studies</strong></td>
+                            </tr>
+                            <tr>
+                                <td> 🟡 </td>
+                                <td><strong>2 Blog Writing Assignments</strong></td>
+                            </tr>
+                            <tr>
+                                <td> 🟡 </td>
+                                <td><strong>Interview Preparation</strong></td>
+                            </tr>
+                        </table>
+                        
+
+                        <table border="1" cellpadding="8" cellspacing="0">
+                            <tr>
+                                <th><strong>Key Info</strong></th>
+                                <th><strong>Details</strong></th>
+                            </tr>
+                            <tr>
+                                <td><strong>Job Guarantee</strong></td>
+                                <td>Based on performance</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cloud Costs</strong></td>
+                                <td>AWS/Azure costs are additional (not included for case studies)</td>
+                            </tr>
+                        </table>
+
+                        <div style="text-align: center; margin-top: 20px; margin-left: 50px;">
+                            <a href="https://forms.gle/riW8HDhgcuq5SjXA9" target="_blank" 
+                               style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
+                                      text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
+                                      border: 2px solid black; margin-left: 90px;">
+                                Enroll Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-box internship-fees">
+                <h2>2. Paid Internship Opportunities</h2>
+                <p><strong>Gain Real-World Experience Through Paid Internships</strong></p><br>
+                <p>Interns will work on live company projects, gaining valuable hands-on experience. Upon successful completion, you will receive a Certificate from the company.</p><br>
+
+                <h3>Internship Fees & Duration</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Internship Area</th>
+                            <th>Fees</th>
+                            <th>Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>UI/UX Design</td>
+                            <td>₹500</td>
+                            <td>2 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Backend Web Development</td>
+                            <td>₹500</td>
+                            <td>3 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Full Stack Web Development</td>
+                            <td>₹1,000</td>
+                            <td>4 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Machine Learning (ML)</td>
+                            <td>₹1000</td>
+                            <td>4 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Deep Learning (DL)</td>
+                            <td>₹1000</td>
+                            <td>4 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Natural Language Processing (NLP)</td>
+                            <td>₹1200</td>
+                            <td>4 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Vision (CV)</td>
+                            <td>₹1200</td>
+                            <td>4 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Data Science (ML, DL, NLP or CV)</td>
+                            <td>₹2,000</td>
+                            <td>5 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Generative AI (GENAI)</td>
+                            <td>₹3,000</td>
+                            <td>5 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Data Science (ML, DL, NLP, CV) + Cloud (AWS or Azure)</td>
+                            <td>₹4,000</td>
+                            <td>6 weeks</td>
+                        </tr>
+                        <tr>
+                            <td>Generative AI (GENAI) + Cloud (AWS or Azure)</td>
+                            <td>₹5,000</td>
+                            <td>6 weeks</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="text-align: center; margin-top: 20px; margin-left: 50px;">
+                    <a href="https://forms.gle/EoDMpj7MU6rnyU3d6" target="_blank" 
+                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
+                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
+                              border: 2px solid black; margin-left: 10px;">
+                        Enroll Now
+                    </a>
+                </div>
+            </section>
+            
+            <section class="section-box">
+                <h2>3. Ideathon</h2>
+                <ul>
+                    <li><strong>Purpose:</strong> We are gathering fresh and innovative ideas to drive technological solutions.</li>
+                    <li><strong>Opportunity:</strong> This initiative offers you the chance to work collaboratively with a team, pushing the boundaries of creativity and technology.</li>
+                    <li><strong>Additional Benefit:</strong> If your idea gets selected, we will invite you for a brief discussion with our team.</li>
+                    <li><strong>Exposure:</strong> The session will be recorded and broadcast as a podcast on our YouTube and LinkedIn channels, giving your idea exposure to a wider audience.</li>
+                </ul>
+            
+                <div style="text-align: center; margin-top: 20px;">
+                    <!-- Downloadable form (left side) -->
+                    <a href="ANS_AI_MINDS_Acknowledgment_Form.docx" download 
+                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
+                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
+                              border: 2px solid black; margin-right: 10px;">
+                        Download Acknowledgment Form
+                    </a>
+            
+                    <!-- Share Idea button (center) -->
+                    <a href="https://forms.gle/LwkGhUoN28a5SF9T7" target="_blank" 
+                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
+                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
+                              border: 2px solid black; margin-left: 10px; margin-right: 10px;">
+                        Share your idea with us
+                    </a>
+            
+                    <!-- Blogathon T&C link (right side) -->
+                    <a href="ideathon_t_c.html" target="_blank" 
+                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
+                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
+                              border: 2px solid black; margin-left: 10px;">
+                              Ideathon T&C
+                    </a>
+                </div>
+            </section>
+            
+
+            <section class="section-box">
+                <h2>4. Blogathon</h2>
+                <p>Participate in our Blogathon and share your insights on trending technological topics. This is a great opportunity to showcase your expertise, enhance your writing skills, and contribute valuable content to the tech community.</p>
+            
+                <div style="text-align: center; margin-top: 20px;">
+                    <!-- Downloadable form (left side) -->
+                    <a href="ANS_AI_MINDS_Acknowledgment_Form.docx" download 
+                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
+                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
+                              border: 2px solid black; margin-right: 10px;">
+                        Download Acknowledgment Form
+                    </a>
+            
+                    <!-- Share Blog button (center) -->
+                    <a href="https://forms.gle/QEFJdQYTx7fV1UWQ9" target="_blank" 
+                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
+                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
+                              border: 2px solid black; margin-left: 10px; margin-right: 10px;">
+                        Share your technical blog with us
+                    </a>
+            
+                    <!-- Blogathon T&C link (right side) -->
+                    <a href="blogathon_t_c.html" target="_blank" 
+                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
+                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
+                              border: 2px solid black; margin-left: 10px;">
+                        Blogathon T&C
+                    </a>
+                </div>
+            </section>
+            
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

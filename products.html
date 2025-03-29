@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <title>Our Products | ANS AI MINDS</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <script defer src="assets/js/script.js"></script>
@@ -83,11 +83,28 @@
             display: flex;
             flex-direction: column;
             flex: 1;
-            margin-left: 230px;
+            margin-left: 150px;
             min-height: 100vh;
             padding: 20px;
             text-align: center;
         }
+
+        .products-heading {
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            padding: 50px 20px;
+            margin-bottom: 20px;
+            max-width: 275px; /* Adjust this value as needed */
+            margin: auto; /* Centers it horizontally */
+        }
+        
+        .products-heading h1 {
+            font-size: 32px; /* Larger heading */
+            font-weight: bold;
+            margin: 0;
+        }
+        
 
         .products-grid {
             display: flex;
@@ -138,7 +155,8 @@
                 position: relative;
             }
             .container {
-                margin-left: 0;
+                margin-left: 20px;
+                margin-right: 10px;
             }
             footer {
                 width: 100%;
@@ -146,84 +164,203 @@
                 position: relative;
             }
         }
+        /* Mobile Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .hamburger-menu div {
+            width: 25px;
+            height: 4px;
+            margin: 5px;
+            background-color: gold;
+            transition: 0.3s;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: black;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu li {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid gold;
+        }
+
+        .mobile-menu li:first-child {
+            border-top: none;
+        }
+
+        .mobile-menu li a {
+            padding: 15px;
+            font-size: 18px;
+            color: gold;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-menu li a:hover {
+            background: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none; /* Hide sidebar on mobile */
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            footer {
+                width: 100%;
+                left: 0;
+                position: relative;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+
+            .content p {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Your Logo" />
+    <div class="container">
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="skills.html">Our Expertise and Skills</a></li>
-                <li><a href="process.html">How We Work</a></li>
-                <!--<li><a href="clients.html">Clients</a></li>-->
-                <li><a href="why-choose-us.html">Why Choose Us?</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
+
+        <!-- Mobile Menu Links -->
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="skills.html" onclick="closeMobileMenu()">Expertise & Skills</a></li>
+            <li><a href="process.html" onclick="closeMobileMenu()">How We Work</a></li>
+            <li><a href="why-choose-us.html" onclick="closeMobileMenu()">Why Choose Us?</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+        </ul>
+
+        <!-- Sidebar Navigation (Visible on Desktop) -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Your Logo" />
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="skills.html">Expertise & Skills</a></li>
+                    <li><a href="process.html">How We Work</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     
     <!-- Main Content -->
     <div class="content">
+        <section class="products-heading">
+            <h1>Our Products</h1>
+        </section>
+
         <section class="our-products">
-            <div class="container">
-                <h1>Our Products</h1>
+            <div class="container">                
                 <div class="products-grid">
                     <div class="product">
-                        <h2>📌 AutoDocQuery (AI-Powered Document Processing)</h2>
+                        <h2>📌</h2> 
+                        <h2>AutoDocQuery (AI-Powered Document Processing)</h2>
                         <ul>
                             <li>Extracts key insights, automates compliance, and reduces manual review by 70%.</li>
                             <li>Adopted by major financial firms, reducing audit costs significantly.</li>
                         </ul>
                     </div>
                     <div class="product">
-                        <h2>📌 TextifyAI (AI-Powered Content Generation)</h2>
+                        <h2>📌</h2> 
+                        <h2>TextifyAI (AI-Powered Content Generation)</h2>
                         <ul>
                             <li>Enhances content creation productivity by 80%.</li>
                             <li>Used in marketing automation & AI-driven SEO strategies.</li>
                         </ul>
                     </div>
                     <div class="product">
-                        <h2>📌 SummarizerPro (AI Summarization Tool)</h2>
+                        <h2>📌</h2> 
+                        <h2>SummarizerPro (AI Summarization Tool)</h2>
                         <ul>
                             <li>Cuts research time by 50%, used in corporate & academic sectors.</li>
                             <li>Helps companies streamline knowledge management.</li>
                         </ul>
                     </div>
                     <div class="product">
-                        <h2>📌 Text2Vision (Text-to-Image AI)</h2>
+                        <h2>📌</h2> 
+                        <h2>Text2Vision (Text-to-Image AI)</h2>
                         <ul>
                             <li>AI-powered text-to-image generation for marketing & creative industries.</li>
                             <li>Enables faster branding, reducing design costs by 60%.</li>
                         </ul>
                     </div>
                     <div class="product">
-                        <h2>📌 InstaCoder (AI-Powered Code Generation)</h2>
+                        <h2>📌</h2> 
+                        <h2>InstaCoder (AI-Powered Code Generation)</h2>
                         <ul>
                             <li>Automates code generation, reducing developer effort by 40%.</li>
                             <li>Accelerates software delivery timelines for tech firms.</li>
                         </ul>
                     </div>
                     <div class="product">
-                        <h2>📌 CodeSimplify (AI-Powered Code Documentation)</h2>
+                        <h2>📌</h2> 
+                        <h2>CodeSimplify (AI-Powered Code Documentation)</h2>
                         <ul>
                             <li>Auto-generates documentation, improving developer productivity.</li>
                             <li>Adopted by software teams, cutting onboarding time by 30%.</li>
                         </ul>
                     </div>
                     <div class="product">
-                        <h2>📌 AI-Powered Financial Forecasting System</h2>
+                        <h2>📌</h2> 
+                        <h2>AI-Powered Financial Forecasting System</h2>
                         <ul>
                             <li>Predicts stock market trends using LLM-based analytics.</li>
                             <li>Financial firms report a 25% increase in profitability.</li>
                         </ul>
                     </div>
                     <div class="product">
-                        <h2>📌 AI-Driven CRM Solution</h2>
+                        <h2>📌</h2> 
+                            <h2>AI-Driven CRM Solution</h2>
                         <ul>
                             <li>AI-enhanced customer insights, lead scoring, and sentiment analysis.</li>
                             <li>Boosts client retention & conversion rates by 35%.</li>
@@ -238,5 +375,24 @@
     <footer>
         <p>&copy; 2025 Your Company. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Toggle the mobile menu visibility and content fade
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const content = document.getElementById('content');
+            mobileMenu.classList.toggle('open');
+            content.classList.toggle('hidden');
+        }
+
+        // Close the mobile menu after clicking on a link
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const content = document.getElementById('content');
+            mobileMenu.classList.remove('open');
+            content.classList.remove('hidden');
+        }
+    </script>
+
 </body>
 </html>
