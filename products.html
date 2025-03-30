@@ -238,6 +238,17 @@
                 display: block;
             }
 
+            .menu-logo {
+                width: 100%;
+                text-align: center;
+                padding: 15px 0;
+            }
+            
+            .menu-logo img {
+                width: 120px; /* Adjust size as needed */
+                height: auto;
+            }
+
             footer {
                 width: 100%;
                 left: 0;
@@ -564,6 +575,9 @@
 
         <!-- Mobile Menu Links -->
         <ul class="mobile-menu" id="mobile-menu">
+            <li class="menu-logo">
+                <img src="assets/images/logo.png" alt="Logo">
+            </li>
             <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
             <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
             <li><a href="skills.html" onclick="closeMobileMenu()">Expertise & Skills</a></li>

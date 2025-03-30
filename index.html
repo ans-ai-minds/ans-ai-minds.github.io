@@ -224,6 +224,17 @@
             background: #333;
         }
 
+        .menu-logo {
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+        }
+        
+        .menu-logo img {
+            width: 120px; /* Adjust size as needed */
+            height: auto;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .sidebar {
@@ -656,6 +667,9 @@
 
     <!-- Mobile Menu -->
     <ul class="mobile-menu" id="mobile-menu">
+        <li class="menu-logo">
+            <img src="assets/images/logo.png" alt="Logo">
+        </li>
         <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
         <li><a href="skills.html" onclick="closeMobileMenu()">Expertise & Skills</a></li>
         <li><a href="process.html" onclick="closeMobileMenu()">How We Work</a></li>
