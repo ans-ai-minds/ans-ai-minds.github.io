@@ -2,191 +2,218 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Our Courses, Internships, Ideathon, and Blogathon opportunities at ANS AI MINDS.">
-    <title>Our Courses & Opportunities | ANS AI MINDS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <title>About Us | ANS AI MINDS</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <script defer src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/YOUR-REAL-KIT-ID.js" crossorigin="anonymous"></script>
     <style>
-        
-        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        html, body {
+            overflow-x: hidden;
+        }
+        
         body, h1, h2, h3, h4, h5, h6, p, a, span, li {
             color: gold !important;
+
         }
 
         body {
             display: flex;
             flex-direction: column;
-            margin: 0;
             min-height: 100vh;
             background-size: cover;
             font-family: Arial, sans-serif;
-            
         }
 
-        /* Logo */
-        .logo {
-            position: fixed;
-            top: 10px;
-            left: 20px;
-            z-index: 10;
-        }
-
-        .logo img {
-            width: 150px; /* Adjust the size of your logo */
-            height: auto;
-        }
-
-        /* Home Button */
-        .home-button {
-            position: fixed;
-            top: 30px; /* Adjust this value to give space for the logo */
-            left: 250px;
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
             background-color: black;
-            color: gold;
-            padding: 10px 20px;
-            font-size: 16px;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            max-height: 100vh;
+            overflow-y: auto;
         }
 
-        .home-button:hover {
-            background-color: gold;
-            color: black;
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 15px;
         }
+
+        .sidebar .logo img {
+            width: 130px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navbar ul li {
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            font-size: 14px;
+        }
+
+        .navbar ul li a:hover {
+            background: black;
+        }
+
 
         /* Main Content */
         .container {
             display: flex;
             flex-direction: column;
             flex: 1;
-            margin-top: 60px; /* Adjust to make space for the home button */
-            padding: 20px;
-            width: 80%; /* Default width */
-            margin-left: auto;
-            margin-right: auto;
-            
+            margin-left: 230px;
+            min-height: 100vh;
         }
 
         .content {
             padding: 20px;
+            padding-bottom: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             flex-grow: 1;
-            
-        }.content h1 {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: white;
-            background-color: black;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 5px;
         }
 
-
-        /* Course and Internship Section */
-        .section-box {
-            width: 100%; /* Full width for smaller screens */
-            padding: 30px;
-            background: rgba(0, 0, 0, 0.85);
-            border-radius: 15px;
-            margin: 20px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.75);
-        }
-
-        .section-box h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .section-box ul {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .section-box ul li {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .section-box .fee-info {
-            font-size: 20px;
-            margin-top: 20px;
-        }
-
-        .internship-fees table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .internship-fees table, th, td {
-            border: 1px solid #ddd;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .internship-fees table th {
-            background-color: black;
-            color: gold;
-        }
-
-        /* Flexbox for Course Description and Table */
-        .course-container {
+        /* About Section - Centered */
+        .about {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            width: 100%;
+            justify-content: center;
+            min-height: 100vh;
+            margin-left: 10%;
         }
 
-        .course-description {
-            margin-bottom: 20px;
+        /* Larger Transparent Box for Sections */
+        .section-box {
+            background: rgba(0, 0, 0, 0.8); /* Dark overlay for readability */
+            padding: 40px; /* Increased padding for more space inside */
+            border-radius: 15px; /* Slightly larger rounded corners */
+            margin-bottom: 30px; /* More space between boxes */
+            width: 90%; /* Increased width for a larger appearance */
+            max-width: 1200px; /* Allows a bigger max width */
             text-align: center;
         }
 
-        .course-details {
-            width: 100%;
-            max-width: 800px; /* Limit the width of the table */
-            margin-top: 20px;
+
+        .client-box {
+            background: rgba(0, 0, 0, 0.56); /* Semi-transparent black */
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        /* Stats Section Container */
+        .stats-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual Stat Box */
+        .stat-box {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            padding: 20px;
+            border-radius: 10px;
+            width: 23%; /* Four per row */
+            min-width: 220px;
             text-align: center;
+            box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s ease;
         }
 
-        .course-details table {
-            width: 100%;
-            border: 1px solid #ddd;
-            border-collapse: collapse;
-            margin-top: 20px;
+        .stat-box:hover {
+            transform: translateY(-5px);
         }
 
-        .course-details th, .course-details td {
-            padding: 12px;
-            text-align: center;
-        }
-
-        .course-details th {
-            background-color: black;
+        /* Stat Numbers */
+        .stat-box h3 {
             color: gold;
+            font-size: 30px;
+            font-weight: bold;
         }
+
+        /* Stat Description */
+        .stat-box p {
+            color: gold;
+            font-size: 14px;
+        }
+
+    
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .feedback-box {
+                max-width: 95%;
+            }
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .stat-box {
+                width: 45%; /* Two per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stat-box {
+                width: 100%; /* Full width on very small screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mission-vision {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Centering Text */
+        .section-box h1, 
+        .section-box h2, 
+        .section-box p {
+             color: gold !important;
+        }
+        
 
         /* Footer */
         footer {
             text-align: center;
             padding: 5px;
             background: black;
+            color:gold;
             font-size: 18px;
             font-weight: bold;
             width: 100%;
@@ -197,48 +224,243 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: fixed;
+            }
             .container {
-                margin-top: 80px; /* Adjust for mobile */
-                width: 95%; /* Decrease width to fit better on smaller screens */
-                padding: 15px; /* Reduce padding */
+                margin-left: 0;
+            }
+            footer {
+                width: 100%;
+                left: 0;
+                position: fixed;
+            }
+        }
+
+        /* Mobile Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .hamburger-menu div {
+            width: 25px;
+            height: 4px;
+            margin: 5px;
+            background-color: gold;
+            transition: 0.3s;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background: black;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            padding: 10px 0;
+            z-index: 10;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu li {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid gold;
+        }
+
+        .mobile-menu li:first-child {
+            border-top: none;
+        }
+
+        .mobile-menu li a {
+            padding: 15px;
+            font-size: 18px;
+            color: gold;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .mobile-menu li a:hover {
+            background: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none; /* Hide sidebar on mobile */
+            }
+
+            .content {
+                margin-left: 0;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            footer {
+                width: 100%;
+                left: 0;
+                position: fixed;
             }
 
             .content h1 {
                 font-size: 28px;
-                
-                
             }
 
             .content p {
                 font-size: 16px;
             }
 
-            .section-box {
-                padding: 15px; /* Reduce padding for mobile */
-            }
-
-            .section-box h2 {
-                font-size: 25px; /* Adjust heading size */
-            }
-
-            .section-box ul li {
-                font-size: 16px; /* Adjust list item font size */
-            }
-
-            .course-container {
-                flex-direction: column; /* Stack items on smaller screens */
-                align-items: stretch;
-            }
-
-            .course-description {
-                margin-right: 0;
-            }
-
-            .course-details {
-                margin-top: 20px;
+            .btn {
+                font-size: 14px;
             }
         }
-        /* Background Animation */
+
+        /* 🌟 General Feedback Section Styling */
+.feedback {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    height: auto;
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🌟 Feedback Header */
+.feedback h2 {
+    color: gold;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+/* 🔹 Desktop Version */
+@media (min-width: 1024px) {
+    .feedback {
+        text-align: left; /* Aligns header and content properly */
+    }
+
+    .feedback h2 {
+        margin-left: -20px; /* Moves header towards left */
+        text-align: left;
+    }
+
+    .feedback-slider {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        max-width: 600px;
+        height: 350px;
+        margin: 0 auto;
+        transform: translateX(-30%); /* Moved slightly more left */
+    }
+
+    .feedback-box {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        max-width: 80%;
+        box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+        width: 100%; /* Ensure full width usage */
+        text-align: left; /* Aligns text properly */
+        left: -5%; /* Moves box slightly more left */
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .feedback-box.active {
+        opacity: 1;
+        position: relative;
+    }
+}
+
+
+/* 🔹 Mobile Version */
+@media (max-width: 768px) {
+    .feedback {
+        width: 95%;
+        max-height: none;
+        padding: 10px;
+    }
+
+    .feedback h2 {
+        font-size: 16px;
+    }
+
+    .feedback-slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        height: auto !important;
+        position: relative;
+    }
+
+    .feedback-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 95%;
+        min-height: 250px;
+        background: rgba(255, 255, 255, 0.04);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .feedback-box.active {
+        opacity: 1;
+        position: relative;
+    }
+}
+@media (max-width: 768px) {
+    .mission-vision {
+        margin-left: -10px; /* Adjust this value as needed */
+    }
+
+    .mission-vision .section-box {
+        padding-left: 5px; /* Fine-tune if needed */
+    }
+}
+
+/* Background Animation */
 @keyframes moveBoxes {
     0% { transform: translateY(0) translateX(0); }
     50% { transform: translateY(-10px) translateX(10px) rotate(10deg); }
@@ -378,9 +600,15 @@
 .animated-background div:nth-child(102) { top: 88%; left: 78%; animation-duration: 3.8s; }
 .animated-background div:nth-child(103) { top: 90%; left: 86%; animation-duration: 4s; }
 
+
+        
     </style>
 </head>
+
+
+
 <body>
+
 
     <div class="animated-background">
         <!-- 960 divs -->
@@ -536,291 +764,182 @@
         <div></div><div></div><div></div><div></div><div></div>
     </div>
 
-
-    <!-- Logo -->
-    <div class="logo">
-        <img src="../assets/images/logo.png" alt="Your Logo" />
-    </div>
-
-    <!-- Home Button -->
-    <a href="../index.html" class="home-button">Home</a>
-
     <div class="container">
-        <!-- Main Content -->
-        <div class="content">
-            <h1>Our Courses & Opportunities</h1>
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
-            <section class="section-box">
-                <h2>1. Paid Courses</h2>
-                <p><strong>Live Weekly Classes (3 hours per session) - 1-Year Duration</strong></p><br>
-                <p>We offer a comprehensive set of courses, designed to provide you with the skills necessary for a successful career in technology. The curriculum includes the following core topics:</p>
-            
-                <div class="course-container">
-                    <!-- Text Content -->
-                    <div class="course-description"><br>
-                        <h3>Course Details</h3>
-                        <p>Detailed description of the courses and their duration.</p>
+        <!-- Mobile Menu Links -->
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="about.html" onclick="closeMobileMenu()">About Us</a></li>
+            <li><a href="skills.html" onclick="closeMobileMenu()">Expertise & Skills</a></li>
+            <li><a href="process.html" onclick="closeMobileMenu()">How We Work</a></li>
+            <li><a href="products.html" onclick="closeMobileMenu()">Our Products</a></li>
+            <li><a href="why-choose-us.html" onclick="closeMobileMenu()">Why Choose Us?</a></li>
+            <li><a href="contact.html" onclick="closeMobileMenu()">Contact Us</a></li>
+        </ul>
+
+        <!-- Sidebar Navigation (Visible on Desktop) -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Your Logo" />
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="skills.html">Expertise & Skills</a></li>
+                    <li><a href="process.html">How We Work</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    <!-- Main Content -->
+    <div class="content">
+            <section class="about">
+                <div class="section-box">
+                    <h1>Our Client's</h1>
+                    <p>At ANS AI MINDS, we collaborate with businesses globally, delivering AI-driven solutions that enhance efficiency, innovation, and growth. From startups to enterprises, we empower our clients with cutting-edge AI technologies, helping them stay ahead in the evolving digital landscape.</p>
+                </div>
+
+                <div class="section-box">
+                    <h2>Clients We’ve Worked</h2>
+                
+                    <div class="client-box">
+                        <h3>🔹 Global Financial Institution (Revenue Impact: 18% growth in customer satisfaction)</h3>
+                        <ul>
+                            <li>Developed AI-powered chatbots using NLP and LLMs for real-time customer support.</li>
+                            <li>Integrated financial forecasting tools with Deep Learning models for risk analysis.</li>
+                            <li>Deployed Generative AI for personalized financial reports, automating advisory services.</li>
+                        </ul>
                     </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Leading E-Commerce Platform (Revenue Impact: 40% increase in sales)</h3>
+                        <ul>
+                            <li>Designed a recommendation engine using Deep Learning-based collaborative filtering.</li>
+                            <li>Enhanced inventory management through Generative AI-powered demand forecasting.</li>
+                            <li>Implemented Conversational AI with NLP for AI-assisted product discovery.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Online Payment Solutions (Revenue Impact: 50% reduction in fraud cases)</h3>
+                        <ul>
+                            <li>Developed AI fraud detection system using Deep Learning anomaly detection models.</li>
+                            <li>Automated transaction verification with blockchain integration and Generative AI.</li>
+                            <li>Integrated NLP-based AI to analyze financial documents for fraud detection.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Healthcare Provider (Revenue Impact: 30% improvement in patient care coordination)</h3>
+                        <ul>
+                            <li>Developed AI-powered diagnostic tools using Deep Learning for medical imaging.</li>
+                            <li>Automated patient scheduling with NLP-based AI assistants.</li>
+                            <li>Leveraged Generative AI to summarize complex medical records for doctors.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Tech Manufacturing Leader (Revenue Impact: 25% increase in production efficiency)</h3>
+                        <ul>
+                            <li>Implemented AI-driven supply chain models with Deep Learning predictive analytics.</li>
+                            <li>Integrated IoT sensors & AI for predictive maintenance with Neural Networks.</li>
+                            <li>Deployed Generative AI-powered anomaly detection to improve product quality.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="client-box">
+                        <h3>🔹 Retail Chain (Revenue Impact: 28% increase in foot traffic)</h3>
+                        <ul>
+                            <li>Built AI-powered recommendation engines leveraging Deep Learning NLP models.</li>
+                            <li>Developed an automated inventory system using Generative AI-powered forecasting.</li>
+                            <li>Implemented AI-based virtual assistants using NLP for voice & chat shopping.</li>
+                        </ul>
+                    </div>
+                </div>
+                
 
-                    <!-- Course Table -->
-                    <div class="course-details">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Course Name</th>
-                                    <th>Duration</th>
-                                    <th>Fees</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="3"><strong>Core Topics:</strong></td>
-                                </tr>
-                                <tr>
-                                    <td>Python Programming</td>
-                                    <td rowspan="9">1 Year</td>
-                                    <td rowspan="9">₹ 25,000 + GST (Total for all courses)</td>
-                                </tr>
-                                <tr>
-                                    <td>Exploratory Data Analysis (EDA)</td>                                
-                                </tr>
-                                <tr>
-                                    <td>Statistics</td>                                
-                                </tr>
-                                <tr>
-                                    <td>Machine Learning (ML)</td>
-                                </tr>
-                                <tr>
-                                    <td>Deep Learning (DL)</td>
-                                </tr>
-                                <tr>
-                                    <td>Natural Language Processing (NLP)</td>
-                                </tr>
-                                <tr>
-                                    <td>Computer Vision (CV)</td>
-                                </tr>
-                                <tr>
-                                    <td>Large Language Models (LLM)</td>
-                                </tr>
-                                <tr>
-                                    <td>Generative AI (GENAI)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <br>
-                        <br>
+                <div class="section-box">
+                    <h2>Key Achievements</h2>
+                    <ul>
+                        <li> Developed AI-powered automation tools that increased operational efficiency by 40%.</li>
+                        <li> Implemented predictive maintenance systems, reducing downtime by 30%.</li>
+                        <li> Created personalized AI-based marketing systems, boosting customer engagement by 35%.</li>
+                        <li> Optimized financial forecasting, increasing revenue by 25% for clients across various industries.</li>
+                    </ul>
+                </div>
 
-                        <h3><strong>Additional Program Inclusions</strong></h3>
-
-                        <table border="1" cellpadding="10">
-                            <tr>
-                                <th></th>
-                                <th><strong>Feature</strong></th>
-                            </tr>
-                            <tr>
-                                <td> 🟡 </td>
-                                <td><strong>25 Hands-on Projects</strong></td>
-                            </tr>
-                            <tr>
-                                <td> 🟡 </td>
-                                <td><strong>2 Case Studies</strong></td>
-                            </tr>
-                            <tr>
-                                <td> 🟡 </td>
-                                <td><strong>2 Blog Writing Assignments</strong></td>
-                            </tr>
-                            <tr>
-                                <td> 🟡 </td>
-                                <td><strong>Interview Preparation</strong></td>
-                            </tr>
-                        </table>
-                        
-
-                        <table border="1" cellpadding="8" cellspacing="0">
-                            <tr>
-                                <th><strong>Key Info</strong></th>
-                                <th><strong>Details</strong></th>
-                            </tr>
-                            <tr>
-                                <td><strong>Job Guarantee</strong></td>
-                                <td>Based on performance</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Cloud Costs</strong></td>
-                                <td>AWS/Azure costs are additional (not included for case studies)</td>
-                            </tr>
-                        </table>
-
-                        <div style="text-align: center; margin-top: 20px; margin-left: 50px;">
-                            <a href="https://forms.gle/riW8HDhgcuq5SjXA9" target="_blank" 
-                               style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
-                                      text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
-                                      border: 2px solid black; margin-left: 90px;">
-                                Enroll Now
-                            </a>
+                <section class="feedback">
+                    <div class="container">
+                        <h2>🌟 Client's Feedback 🌟</h2>
+                
+                        <!-- Feedback Slider -->
+                        <div class="feedback-slider">
+                            <div class="feedback-box active">
+                                <h3>🔹 Global Consulting Firm</h3>
+                                <p>⭐⭐⭐⭐⭐ <strong>"AI-Powered Efficiency Boost!"</strong></p>
+                                <p>"Working with ANS AI MINDS was a game-changer for our operations. Their AI-based data analytics tools automated our client reporting, improving process efficiency by 20%! The machine learning algorithms they implemented optimized our cost structure, making decision-making faster and more effective. A truly invaluable partnership!"</p>
+                                <p><strong>— Michael Carter, Chief Strategy Officer</strong></p>
+                            </div>
+                
+                            <div class="feedback-box">
+                                <h3>🔹 International Audit Firm</h3>
+                                <p>⭐⭐⭐⭐⭐ <strong>"Accuracy and Compliance Like Never Before!"</strong></p>
+                                <p>"The cloud-based tax reporting system designed by ANS AI MINDS significantly enhanced the accuracy of our financial reporting. Their AI-powered auditing tools helped us reduce compliance errors by 15%, ensuring better risk assessment. Their professionalism and expertise are unmatched!"</p>
+                                <p><strong>— Sophia Patel, Head of Compliance</strong></p>
+                            </div>
+                
+                            <div class="feedback-box">
+                                <h3>🔹 Tech Manufacturing Leader</h3>
+                                <p>⭐⭐⭐⭐⭐ <strong>"Revolutionizing Production with AI!"</strong></p>
+                                <p>"Thanks to ANS AI MINDS, our production efficiency skyrocketed by 25%! Their AI-driven supply chain models optimized inventory levels, and predictive maintenance with IoT sensors drastically reduced downtime. We highly recommend them for any AI-driven transformation!"</p>
+                                <p><strong>— David Chang, Operations Director</strong></p>
+                            </div>
+                
+                            <div class="feedback-box">
+                                <h3>🔹 Global Financial Institution</h3>
+                                <p>⭐⭐⭐⭐⭐ <strong>"AI-Powered Customer Experience & Forecasting!"</strong></p>
+                                <p>"We needed an AI-powered solution for customer support, and ANS AI MINDS delivered beyond expectations! The chatbot they built drastically improved response times, leading to an 18% increase in customer satisfaction. Their financial forecasting tools also gave us deep insights for better decision-making. Exceptional work!"</p>
+                                <p><strong>— Emily Rodriguez, VP of Digital Banking</strong></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                
 
-            <section class="section-box internship-fees">
-                <h2>2. Paid Internship Opportunities</h2>
-                <p><strong>Gain Real-World Experience Through Paid Internships</strong></p><br>
-                <p>Interns will work on live company projects, gaining valuable hands-on experience. Upon successful completion, you will receive a Certificate from the company.</p><br>
-
-                <h3>Internship Fees & Duration</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Internship Area</th>
-                            <th>Fees</th>
-                            <th>Duration</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>UI/UX Design</td>
-                            <td>₹500</td>
-                            <td>2 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Backend Web Development</td>
-                            <td>₹500</td>
-                            <td>3 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Full Stack Web Development</td>
-                            <td>₹1,000</td>
-                            <td>4 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Machine Learning (ML)</td>
-                            <td>₹1000</td>
-                            <td>4 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Deep Learning (DL)</td>
-                            <td>₹1000</td>
-                            <td>4 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Natural Language Processing (NLP)</td>
-                            <td>₹1200</td>
-                            <td>4 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Computer Vision (CV)</td>
-                            <td>₹1200</td>
-                            <td>4 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Data Science (ML, DL, NLP or CV)</td>
-                            <td>₹2,000</td>
-                            <td>5 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Generative AI (GENAI)</td>
-                            <td>₹3,000</td>
-                            <td>5 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Data Science (ML, DL, NLP, CV) + Cloud (AWS or Azure)</td>
-                            <td>₹4,000</td>
-                            <td>6 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Generative AI (GENAI) + Cloud (AWS or Azure)</td>
-                            <td>₹5,000</td>
-                            <td>6 weeks</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div style="text-align: center; margin-top: 20px; margin-left: 50px;">
-                    <a href="https://forms.gle/EoDMpj7MU6rnyU3d6" target="_blank" 
-                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
-                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
-                              border: 2px solid black; margin-left: 10px;">
-                        Enroll Now
-                    </a>
-                </div>
             </section>
-            
-            <section class="section-box">
-                <h2>3. Ideathon</h2>
-                <ul>
-                    <li><strong>Purpose:</strong> We are gathering fresh and innovative ideas to drive technological solutions.</li>
-                    <li><strong>Opportunity:</strong> This initiative offers you the chance to work collaboratively with a team, pushing the boundaries of creativity and technology.</li>
-                    <li><strong>Additional Benefit:</strong> If your idea gets selected, we will invite you for a brief discussion with our team.</li>
-                    <li><strong>Exposure:</strong> The session will be recorded and broadcast as a podcast on our YouTube and LinkedIn channels, giving your idea exposure to a wider audience.</li>
-                </ul>
-            
-                <div style="text-align: center; margin-top: 20px;">
-                    <!-- Downloadable form (left side) -->
-                    <a href="ANS_AI_MINDS_Acknowledgment_Form.docx" download 
-                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
-                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
-                              border: 2px solid black; margin-right: 10px;">
-                        Download Acknowledgment Form
-                    </a>
-            
-                    <!-- Share Idea button (center) -->
-                    <a href="https://forms.gle/LwkGhUoN28a5SF9T7" target="_blank" 
-                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
-                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
-                              border: 2px solid black; margin-left: 10px; margin-right: 10px;">
-                        Share your idea with us
-                    </a>
-            
-                    <!-- Blogathon T&C link (right side) -->
-                    <a href="ideathon_t_c.html" target="_blank" 
-                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
-                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
-                              border: 2px solid black; margin-left: 10px;">
-                              Ideathon T&C
-                    </a>
-                </div>
-            </section>
-            
-
-            <section class="section-box">
-                <h2>4. Blogathon</h2>
-                <p>Participate in our Blogathon and share your insights on trending technological topics. This is a great opportunity to showcase your expertise, enhance your writing skills, and contribute valuable content to the tech community.</p>
-            
-                <div style="text-align: center; margin-top: 20px;">
-                    <!-- Downloadable form (left side) -->
-                    <a href="ANS_AI_MINDS_Acknowledgment_Form.docx" download 
-                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
-                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
-                              border: 2px solid black; margin-right: 10px;">
-                        Download Acknowledgment Form
-                    </a>
-            
-                    <!-- Share Blog button (center) -->
-                    <a href="https://forms.gle/QEFJdQYTx7fV1UWQ9" target="_blank" 
-                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
-                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
-                              border: 2px solid black; margin-left: 10px; margin-right: 10px;">
-                        Share your technical blog with us
-                    </a>
-            
-                    <!-- Blogathon T&C link (right side) -->
-                    <a href="blogathon_t_c.html" target="_blank" 
-                       style="display: inline-block; background-color: gold; color: black !important; padding: 10px 20px; 
-                              text-decoration: none; font-size: 16px; border-radius: 5px; font-weight: bold; 
-                              border: 2px solid black; margin-left: 10px;">
-                        Blogathon T&C
-                    </a>
-                </div>
-            </section>
-            
-
         </div>
-    </div>
 
-    <!-- Footer -->
+        <!-- Footer -->
     <footer>
         <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
     </footer>
 
+    <script>
+        // Toggle the mobile menu visibility and content fade
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const content = document.getElementById('content');
+            mobileMenu.classList.toggle('open');
+            content.classList.toggle('hidden');
+        }
+
+        // Close the mobile menu after clicking on a link
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const content = document.getElementById('content');
+            mobileMenu.classList.remove('open');
+            content.classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
