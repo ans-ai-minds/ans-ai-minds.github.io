@@ -273,35 +273,36 @@
             }
 
             /* Square Button Styling (Responsive) */
-            .square-button {
-                position: fixed;
-                bottom: 150px; /* Move the button up a little */
-                left: 50%;
-                transform: translateX(-50%);
-                padding: 12px 30px;
-                background-color: gold;
-                color: black;
-                font-size: 16px;
-                font-weight: bold;
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                border-radius: 25px;
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-                transition: all 0.3s ease;
-                z-index: 1000;
-            }
+            /* Square Button Styling (Responsive) */
+.square-button {
+    position: fixed;
+    bottom: 10%; /* Adjust bottom to make space for the button */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 30px;
+    background-color: gold;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
 
-            .square-button:hover {
-                background-color: #d4af37;
-                transform: translateX(-50%) translateY(-5px);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            }
+.square-button:hover {
+    background-color: #d4af37;
+    transform: translateX(-50%) translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 
-            .square-button:active {
-                transform: translateX(-50%) translateY(0);
-            }
+.square-button:active {
+    transform: translateX(-50%) translateY(0);
+}
 
             /* Hide content and square button when mobile menu is open */
             .mobile-menu.open ~ .content,
