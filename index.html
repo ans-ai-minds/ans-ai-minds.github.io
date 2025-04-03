@@ -93,6 +93,7 @@
             height: 100vh;
             position: relative;
             padding: 20px;
+            
         }
 
         /* Overlay for better readability */
@@ -124,6 +125,7 @@
             max-width: 100%;
             position: relative;
             top: -50px; /* Adjust the value as needed */
+            margin-top: 110px;
         }
 
         /* Text Styling */
@@ -162,7 +164,9 @@
             font-size: 18px;
             font-weight: bold;
             width: 100%;
-            position: relative;
+            position: fixed;
+            bottom: 0;
+            left: 0;
         }
 
         /* Mobile Hamburger Menu */
@@ -273,36 +277,35 @@
             }
 
             /* Square Button Styling (Responsive) */
-            /* Square Button Styling (Responsive) */
-.square-button {
-    position: fixed;
-    bottom: 10%; /* Adjust bottom to make space for the button */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 12px 30px;
-    background-color: gold;
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border-radius: 25px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
+            .square-button {
+                position: fixed;
+                bottom: 150px; /* Move the button up a little */
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 12px 30px;
+                background-color: gold;
+                color: black;
+                font-size: 16px;
+                font-weight: bold;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                border-radius: 25px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+                z-index: 1000;
+            }
 
-.square-button:hover {
-    background-color: #d4af37;
-    transform: translateX(-50%) translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+            .square-button:hover {
+                background-color: #d4af37;
+                transform: translateX(-50%) translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
 
-.square-button:active {
-    transform: translateX(-50%) translateY(0);
-}
+            .square-button:active {
+                transform: translateX(-50%) translateY(0);
+            }
 
             /* Hide content and square button when mobile menu is open */
             .mobile-menu.open ~ .content,
@@ -351,6 +354,17 @@
     100% { transform: translateY(0) translateX(0); }
 
 }
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.course-info {
+    animation: blink 1s infinite;
+}
+
 /* Floating animation effect */
 @keyframes floatAnimation {
     0% { transform: translateY(0px) scale(1); opacity: 1; }
@@ -690,12 +704,22 @@
         </section>
     </div>
 
-    <!-- Square Button (Desktop and Mobile) -->
-    <a href="course/course.html" class="square-button">Learning Corner (Certification/Job Guarantee Course/Internship)</a>
+    <div class="content" id="content">
+        <section class="hero">
+            <!-- Square Button (Desktop and Mobile) -->
+            <p class="course-info"> Course starts from June 2025. Enrollment started, Limited seats filling up fast, hurry up! </p>
+            <a href="course/course.html" class="btn">Learning Corner (Certification/Job Guarantee Course/Internship)</a>
+        </section>
+    </div>
+            
+        
+
+
+
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
+        <p>&copy; 2025 ANS AI MINDS. All rights reserved.</p>
     </footer>
 
     <script>
